@@ -1,0 +1,18 @@
+@import '@styles/theme.module.scss';
+
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.heading1 {
+    font: $title-font;
+}
+
+.link {
+    color: blue;
+    text-decoration-line: underline;
+}
