@@ -5,8 +5,8 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "build": "remix vite:build",
-    "dev": "remix vite:dev",
+    "build": "vite build",
+    "dev": "vite dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "typecheck": "tsc"
   },
