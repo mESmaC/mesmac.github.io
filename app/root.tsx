@@ -1,7 +1,6 @@
 import {
     Links,
     Meta,
-    Outlet,
     Scripts,
     ScrollRestoration,
     isRouteErrorResponse,
@@ -9,6 +8,8 @@ import {
 } from '@remix-run/react';
 import { ErrorComponent } from '~/components/error-component/error-component';
 import '~/styles/index.scss';
+import styles from './root.module.scss';
+import { Content } from '../src/components/content/content';
 
 export function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -19,7 +20,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <Meta />
                 <Links />
             </head>
-            <body>
+            <body className={styles.body1}>
                 {children}
                 <ScrollRestoration />
                 <Scripts />
@@ -31,7 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
     return (
         <div id="root">
-            <Outlet />
+            <Content className={styles.content} />
         </div>
     );
 }

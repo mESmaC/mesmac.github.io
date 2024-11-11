@@ -4,13 +4,19 @@ import { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node
 import commonStyles from '~/styles/common-styles.module.scss';
 import { getUrlOriginWithPath } from '~/utils';
 import errorComponentStyles from '../../../src/components/error-component/error-component.module.scss';
+import { Dash } from '../../../src/components/dash/dash';
+import styles0 from './route.module.scss';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
 };
 
 export default function HomePage() {
-    return <div className={errorComponentStyles.root} />;
+    return (
+        <div className={classNames(errorComponentStyles.root, styles0.div1)}>
+            <Dash />
+        </div>
+    );
 }
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
