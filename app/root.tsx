@@ -31,23 +31,27 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
     return (
-        <div id="root">
-            <Content className={styles.content} />
-        </div>
+        <Layout>
+            <div className={styles.content}>
+                <Content />
+            </div>
+        </Layout>
     );
 }
 
 export function ErrorBoundary() {
     const error = useRouteError();
     const { title, message } = getErrorDetails(error);
-
-    return <ErrorComponent title={title} message={message} />;
+    return (
+        <Layout>
+            <ErrorComponent title={title} message={message} />
+        </Layout>
+    );
 }
 
 function getErrorDetails(error: unknown) {
     let title: string;
     let message: string | undefined;
-
     if (isRouteErrorResponse(error)) {
         if (error.status === 404) {
             title = 'Page Not Found';
@@ -59,6 +63,5 @@ function getErrorDetails(error: unknown) {
     } else {
         title = 'Unknown error ocurred';
     }
-
     return { title, message };
 }
