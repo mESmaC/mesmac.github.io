@@ -1,147 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cameron Emery - UX/UI Designer</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <script defer src="scripts/scripts.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cameron Emery — Embedded Systems Engineer</title>
+  <meta name="description" content="Cameron Emery — embedded systems engineer building real-time firmware, FPGA-accelerated hardware, multi-MCU automotive systems, and engineering tools. Founder at US Nylon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script defer src="scripts/scripts.js"></script>
 </head>
 <body>
-    <div class="root">
-        <a href="#main" class="skip-link">Skip to main content</a>
-        
-        <main id="main" class="card">
-            <header class="header">
-                <img src="assets/profile.jpg" alt="Your professional headshot" class="profile-img">
-                <h1>Cameron</h1>
-                <p>Software Developer</p>
-            </header>
+  <a href="#main" class="skip-link">Skip to main content</a>
 
-            <div class="content">
-                <section class="section" aria-labelledby="about-heading">
-                    <h2 id="about-heading">About Me</h2>
-                    <p>I'm a Software Developer that likes to work on anything from Systems level applications to Full-Stack applications. I employ my own version of CI/CD in my day to day live CL/CAK, I call it clack! Which mean Continuosly Learn and Continuously Apply Knowledge. I enjoy working on everything from responsive UX/UI to reviewing PR's. If you'd like to learn more about what I do you can view my github <a href="https://github.com/mESmaC" target="_blank">here.</a></p>
-                </section>
+  <!-- decorative PCB-trace backdrop -->
+  <div class="bg-grid" aria-hidden="true"></div>
 
-                <section class="section" aria-labelledby="skills-heading">
-                    <h2 id="skills-heading">Skills & Technologies</h2>
-                    <div class="skills">
-                        <span class="skill-tag">UI/UX Design</span>
-                        <span class="skill-tag">Figma</span>
-                        <span class="skill-tag">Wireframing</span>
-                        <span class="skill-tag">Frontend Libraries</span>
-                        <span class="skill-tag">Django</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Golang</span>
-                        <span class="skill-tag">HTML/CSS/JS/TS</span>
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">Basic C/C++</span>
-                        <span class="skill-tag">Python/Tensorflow</span>
-                    </div>
-                </section>
+  <header class="nav">
+    <a href="#top" class="nav-mark">CE<span>/</span></a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#stack">Stack</a>
+      <a href="assets/Cameron_Emery_Resume.pdf" class="nav-cta" target="_blank" rel="noopener">Résumé ↧</a>
+    </nav>
+  </header>
 
-                <section class="section" aria-labelledby="portfolio-heading">
-                    <h2 id="portfolio-heading">Portfolio</h2>
-                    <h4>(Click to see a larger image)</h4>
-                    <div class="portfolio-grid">
-    
-                    <a href="assets/noc-web1.jpg" target="_blank">
-                        <article class="portfolio-item">
-                            <div class="image-carousel" data-interval="3000">
-                                <div class="carousel-track">
-                                    <img src="assets/noc-web1.jpg" alt="Nocturio Website Home">
-                                    <img src="assets/noc-web2.png" alt="Nocturio Website Contact">
-                                </div>
-                                <div class="carousel-indicators"></div>
-                            </div>
-                            <div class="portfolio-overlay">
-                                <p>Nocturio</p>
-                            </div>
-                        </article>
-                    </a>
+  <main id="main">
+    <!-- ───────────────── HERO ───────────────── -->
+    <section id="top" class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow" data-reveal>Augusta, Maine · Embedded &amp; Hardware</p>
+        <h1 data-reveal>Cameron Emery</h1>
+        <p class="role" data-reveal>Embedded Systems Engineer — firmware, hardware/firmware co-design, and the tools around them.</p>
+        <p class="lede" data-reveal>
+          I build real-time firmware and multi-MCU architectures for safety-critical automotive
+          systems — and the CAD, protocol, and manufacturing tooling that makes that work faster.
+          Comfortable from bare-metal and RTOS up through embedded Linux, oscilloscope in one hand,
+          schematic in the other.
+        </p>
+        <div class="hero-actions" data-reveal>
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn" href="mailto:cemerybusiness@gmail.com">Get in touch</a>
+        </div>
+        <ul class="hero-links" data-reveal>
+          <li><a href="https://github.com/mESmaC" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/cameronemery67" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="mailto:cemerybusiness@gmail.com">cemerybusiness@gmail.com</a></li>
+        </ul>
+      </div>
 
-                    <a href="assets/noctur-app-track.png" target="_blank">
-                        <article class="portfolio-item">
-                            <div class="image-carousel" data-interval="3000">
-                                <div class="carousel-track">
-                                    <img src="assets/noctur-app.png" alt="Nocturio App Tracker">
-                                    <img src="assets/noctur-app2.png" alt="Nocturio App Tracker Contact">
-                                    <img src="assets/noctur-app3.png" alt="Nocturio App Tracker Track">
-                                </div>
-                                <div class="carousel-indicators"></div>
-                            </div>
-                            <div class="portfolio-overlay">
-                                <p>Nocturio App Tracker</p>
-                            </div>
-                        </article>
-                    </a>
+      <aside class="hero-card" data-reveal aria-label="Currently building">
+        <div class="card-head"><span class="dot"></span> now building</div>
+        <dl class="now-list">
+          <div><dt>Electrace</dt><dd>a transparent, block-based EE IDE — schematic + PCB</dd></div>
+          <div><dt>OCB</dt><dd>automotive bus intelligence (CAN / LIN / SENT / OBD-II)</dd></div>
+          <div><dt>RIND</dt><dd>STEP-in → auto-generated 3D-printable enclosures</dd></div>
+        </dl>
+        <div class="card-foot"><span>EMC · drive-by-wire firmware</span><span>US Nylon · co-founder</span></div>
+      </aside>
+    </section>
 
-                    <a href="assets/tutor-website.png" target="_blank">
-                        <article class="portfolio-item">
-                            <div class="image-carousel" data-interval="3000">
-                                <div class="carousel-track">
-                                    <img src="assets/tutor-website.png" alt="Tutoring Website Demo">
-                                </div>
-                                <div class="carousel-indicators"></div>
-                            </div>
-                            <div class="portfolio-overlay">
-                                <p>Tutoring Website</p>
-                            </div>
-                        </article>
-                    </a> 
-               
-                    <a href="https://mesmac.github.io/Flutter-documentation/" target="_blank">
-                        <article class="portfolio-item">
-                            <div class="image-carousel" data-interval="3000">
-                                <div class="carousel-track">
-                                    <img src="assets/flutter-dox.png" alt="Simple Flutter Documentation Demo">
-                                </div>
-                                <div class="carousel-indicators"></div>
-                            </div>
-                            <div class="portfolio-overlay">
-                                <p>Flutter Documentation Demo</p>
-                            </div>
-                        </article>
-                    </a>
+    <!-- ───────────────── ABOUT ───────────────── -->
+    <section id="about" class="section">
+      <div class="section-head" data-reveal>
+        <span class="kicker">01 — About</span>
+        <h2>Firmware up, tools out.</h2>
+      </div>
+      <div class="about-grid">
+        <p class="about-lead" data-reveal>
+          Embedded systems engineer specializing in real-time firmware, FPGA-based hardware
+          acceleration, and multi-MCU architectures for safety-critical automotive applications.
+          I work across the full hardware/firmware co-design loop — schematic capture and PCB layout,
+          bring-up, protocol validation, and rigorous root-cause debugging — and I build the tooling
+          that removes the friction in that loop.
+        </p>
+        <ul class="about-facts" data-reveal>
+          <li><strong>Domain</strong><span>Automotive · safety-critical control</span></li>
+          <li><strong>Layers</strong><span>Bare-metal · RTOS · Embedded Linux</span></li>
+          <li><strong>Buses</strong><span>CAN · CAN-FD · LIN · SENT · OBD-II</span></li>
+          <li><strong>Also</strong><span>Founder · full-stack · manufacturing</span></li>
+        </ul>
+      </div>
+    </section>
 
-                    <a href="assets/phone-preview.png" target="_blank">
-                         <article class="portfolio-item">
-                             <div class="image-carousel" data-interval="3000">
-                                 <div class="carousel-track">
-                                    <img src="assets/nocturio-phone1.png" alt="Nocturio Phone">
-                                    <img src="assets/nocturio-phone2.png" alt="Nocturio Phone">
-                                    <img src="assets/nocturio-phone-access.png" alt="Nocturio Phone accessible">
-                                    <img src="assets/nocturio-phone-home.png" alt="Nocturio Phone Home">
-                                </div>
-                                 <div class="carousel-indicators"></div>
-                            </div>
-                            <div class="portfolio-overlay">
-                                 <p>Nocturio Phone</p>
-                            </div>
-                         </article>
-                    </a>
+    <!-- ───────────────── EXPERIENCE ───────────────── -->
+    <section id="work" class="section">
+      <div class="section-head" data-reveal>
+        <span class="kicker">02 — Experience</span>
+        <h2>Where I've shipped.</h2>
+      </div>
+      <ol class="timeline">
+        <li class="tl-item" data-reveal>
+          <div class="tl-when">08/2025 — Present</div>
+          <div class="tl-body">
+            <h3>Embedded Systems Engineer <span class="at">· Electronic Mobility Controls</span></h3>
+            <p>Firmware and systems work on automotive accessibility platforms — drive-by-wire
+            shifters, throttle/brake interfaces, and servo-actuated gear controls across multi-MCU
+            architectures (PIC32MK, dsPIC33, Cortex-M, i.MX8/i.MX93).</p>
+            <ul>
+              <li>Solved a shifter integration problem in my first months by adapting a CAN/LIN
+              control system to operate over <strong>SENT</strong>, and designed a custom
+              <strong>OEM-first PCB</strong> that asserts control only when the accessibility
+              system requires it — preserving native vehicle behavior by default.</li>
+              <li>Develop and debug real-time C/C++ firmware for safety-critical drive-by-wire
+              subsystems; validate against CAN, CAN-FD, LIN, and SENT with scopes and logic analyzers.</li>
+              <li>Lead root-cause investigations spanning firmware timing, CRC validation, analog
+              signal conditioning, and relay switching; improved a Linux-based Qt/QML HMI used in
+              production vehicles.</li>
+            </ul>
+            <div class="tl-tags"><span>C/C++</span><span>SENT</span><span>CAN-FD</span><span>PCB design</span><span>Qt/QML</span></div>
+          </div>
+        </li>
+        <li class="tl-item" data-reveal>
+          <div class="tl-when">2024 — Present</div>
+          <div class="tl-body">
+            <h3>Co-founder &amp; Engineer <span class="at">· US Nylon LLC</span></h3>
+            <p>A hardware-engineering venture: additive manufacturing (lattice-structured nylon),
+            CNC, custom enclosures, and in-house electrical CAD tooling — idea to production under
+            one roof. I build the software side: the EE CAD (Electrace), the enclosure pipeline
+            (RIND), and generative manufacturing tooling (G-code lattice infill).</p>
+            <div class="tl-tags"><span>Manufacturing</span><span>CAD tooling</span><span>TALL stack</span><span>3D printing / CNC</span></div>
+          </div>
+        </li>
+        <li class="tl-item" data-reveal>
+          <div class="tl-when">01/2024 — 10/2025</div>
+          <div class="tl-body">
+            <h3>Founder / Software Engineer <span class="at">· Noctur.io</span></h3>
+            <p>Independent SaaS venture for creators and small businesses. Designed and built two
+            full-stack applications end-to-end — architecture, REST &amp; GraphQL APIs, OAuth 2.0,
+            and CI/CD.</p>
+            <div class="tl-tags"><span>Laravel</span><span>React</span><span>PostgreSQL</span><span>Django</span></div>
+          </div>
+        </li>
+      </ol>
+    </section>
 
-                    <a href="https://mesmac.github.io/pokemon-search/" target="_blank">
-                         <article class="portfolio-item">
-                             <div class="image-carousel" data-interval="3000">
-                                 <div class="carousel-track">
-                                    <img src="assets/poke-search.png" alt="Pokemon Search">
-                                </div>
-                                 <div class="carousel-indicators"></div>
-                            </div>
-                            <div class="portfolio-overlay">
-                                 <p>Pokemon Search</p>
-                            </div>
-                         </article>
-                    </a>
+    <!-- ───────────────── PROJECTS ───────────────── -->
+    <section id="projects" class="section">
+      <div class="section-head" data-reveal>
+        <span class="kicker">03 — Selected work</span>
+        <h2>Things I've designed and built.</h2>
+      </div>
 
-                    </div>
-              </section>
+      <div class="projects">
+        <!-- Electrace -->
+        <article class="proj" data-reveal>
+          <div class="proj-visual proj-electrace" aria-hidden="true">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+              <defs><pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.7" fill="#1c2740"/></pattern></defs>
+              <rect width="320" height="180" fill="url(#dots)"/>
+              <rect x="40" y="48" width="60" height="84" rx="3" fill="none" stroke="#c9d2dd" stroke-width="1.2"/>
+              <rect x="210" y="56" width="70" height="68" rx="3" fill="none" stroke="#c9d2dd" stroke-width="1.2"/>
+              <g fill="#c9a23a"><rect x="34" y="62" width="12" height="6"/><rect x="34" y="86" width="12" height="6"/><rect x="34" y="110" width="12" height="6"/><rect x="94" y="74" width="12" height="6"/><rect x="94" y="98" width="12" height="6"/><rect x="204" y="70" width="12" height="6"/><rect x="204" y="100" width="12" height="6"/></g>
+              <path d="M106 77 H150 V101 H204" fill="none" stroke="#c83434" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M106 101 L150 77" fill="none" stroke="#4d8fcf" stroke-width="2.4" stroke-linecap="round"/>
+              <text x="70" y="44" fill="#6fd6c0" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">U1</text>
+            </svg>
+          </div>
+          <div class="proj-body">
+            <header><h3>Electrace</h3><span class="proj-kind">EDA · in development</span></header>
+            <p class="proj-tag">The electrical engineer's IDE.</p>
+            <p>A block-based, <em>transparent</em> schematic + PCB tool — nothing is a black box.
+            Authored, versioned blocks compose into designs that are checked <strong>deterministically</strong>
+            (real design rules, not simulation). I built the framework-agnostic TypeScript core
+            (net derivation, power propagation, lint/DRC, KiCad export) and a custom SVG editor:
+            schematic capture plus a KiCad-style PCB layout with octolinear routing, vias and
+            multi-layer copper, filleted traces, a polygon board outline, design-rule checking,
+            net highlighting, and a measurement tool.</p>
+            <ul class="proj-stack"><li>TypeScript</li><li>Next.js</li><li>Custom SVG canvas</li><li>Deterministic DRC</li><li>KiCad export</li></ul>
+          </div>
+        </article>
+
+        <!-- OCB -->
+        <article class="proj" data-reveal>
+          <div class="proj-visual proj-ocb" aria-hidden="true">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+              <rect width="320" height="180" fill="#0c1424"/>
+              <g stroke="#1c2740" stroke-width="1"><line x1="0" y1="60" x2="320" y2="60"/><line x1="0" y1="120" x2="320" y2="120"/></g>
+              <!-- CAN-ish differential waveform -->
+              <path d="M10 95 H40 V70 H70 V95 H95 V70 H120 V95 H150 V70 H180 V95 H210 V70 H240 V95 H300" fill="none" stroke="#1C60B0" stroke-width="2.4"/>
+              <path d="M10 95 H40 V118 H70 V95 H95 V118 H120 V95 H150 V118 H180 V95 H210 V118 H240 V95 H300" fill="none" stroke="#6fd6c0" stroke-width="2.4" opacity="0.85"/>
+              <text x="14" y="50" fill="#607178" font-family="JetBrains Mono, monospace" font-size="8">0x18DAF110</text>
+              <text x="232" y="50" fill="#607178" font-family="JetBrains Mono, monospace" font-size="8">CAN-FD</text>
+            </svg>
+          </div>
+          <div class="proj-body">
+            <header><h3>OCB — Open Car Bus</h3><span class="proj-kind">Automotive · platform</span></header>
+            <p class="proj-tag">Bus intelligence for the whole vehicle network.</p>
+            <p>Browse, search, decode, and generate code from CAN, CAN-FD, LIN, SENT, J1939 and
+            OBD-II signal databases. Behind it is an automated ingestion pipeline —
+            discover → AI-assisted preflight validation → sandboxed download → filter → dedup →
+            provenance-tracked ingest — that pulls DBC, capture, firmware, and ECU-definition
+            formats from across the web into a single queryable store.</p>
+            <ul class="proj-stack"><li>Flask + REST</li><li>React / TypeScript / Vite</li><li>SQLite (20+ tables)</li><li>AI scraping pipeline</li><li>DBC · MF4 · BLF · VBF</li></ul>
+          </div>
+        </article>
+
+        <!-- RIND -->
+        <article class="proj" data-reveal>
+          <div class="proj-visual proj-rind" aria-hidden="true">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+              <rect width="320" height="180" fill="#0e1521"/>
+              <g fill="none" stroke="#BFC4C9" stroke-width="1.4" stroke-linejoin="round">
+                <path d="M110 60 L210 60 L240 78 L240 130 L140 130 L110 112 Z"/>
+                <path d="M110 60 L140 78 L240 78"/>
+                <path d="M140 78 L140 130"/>
+              </g>
+              <g stroke="#1C60B0" stroke-width="1.4"><rect x="158" y="92" width="22" height="14" fill="none"/><rect x="190" y="92" width="10" height="14" fill="none"/></g>
+              <text x="110" y="150" fill="#607178" font-family="JetBrains Mono, monospace" font-size="8">assembly.step → enclosure</text>
+            </svg>
+          </div>
+          <div class="proj-body">
+            <header><h3>RIND</h3><span class="proj-kind">CAD · generative</span></header>
+            <p class="proj-tag">Upload an assembly, get an enclosure.</p>
+            <p>A web tool that takes a STEP model of an assembly — typically a PCB with connectors
+            and components — and <strong>automatically generates a 3D-printable enclosure</strong>
+            around it, with correctly placed cutouts for ports, screws, and features. A job queue
+            drafts and reviews AI prompts, iterates on the generated geometry, runs QC against the
+            original intent, and routes orders to in-house CNC and 3D printing. Upload → verify → ship.</p>
+            <ul class="proj-stack"><li>STEP analysis</li><li>AI geometry generation</li><li>Job queue + QC loop</li><li>Stripe</li><li>R2 / Firebase storage</li></ul>
+          </div>
+        </article>
+
+        <!-- US Nylon -->
+        <article class="proj" data-reveal>
+          <div class="proj-visual proj-usn" aria-hidden="true">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid meet">
+              <rect width="320" height="180" fill="#11131a"/>
+              <!-- lattice motif -->
+              <g stroke="#1C60B0" stroke-width="1.1" opacity="0.9">
+                <path d="M40 40 L80 80 L40 120 L80 160" fill="none"/>
+                <path d="M80 40 L120 80 L80 120 L120 160" fill="none"/>
+                <path d="M120 40 L160 80 L120 120 L160 160" fill="none"/>
+                <path d="M40 40 L80 80 L120 40" fill="none"/>
+                <path d="M40 120 L80 80 L120 120" fill="none"/>
+                <path d="M40 120 L80 160 L120 120" fill="none"/>
+              </g>
+              <text x="190" y="92" fill="#BFC4C9" font-family="Oxanium, sans-serif" font-weight="700" font-size="22">US NYLON</text>
+              <text x="190" y="112" fill="#607178" font-family="JetBrains Mono, monospace" font-size="8">idea → production</text>
+            </svg>
+          </div>
+          <div class="proj-body">
+            <header><h3>US Nylon</h3><span class="proj-kind">Company · co-founder</span></header>
+            <p class="proj-tag">Manufacturing &amp; engineering tools, end to end.</p>
+            <p>The venture the projects above live under: additive manufacturing with
+            lattice-structured nylon, CNC machining, custom enclosures, and the in-house software
+            that drives it all — from generative G-code lattice infill to the EE CAD and enclosure
+            pipelines. I lead the software and tooling side.</p>
+            <ul class="proj-stack"><li>Laravel / TALL stack</li><li>Generative G-code</li><li>Additive + CNC</li><li>Brand &amp; product</li></ul>
+          </div>
+        </article>
+
+        <!-- Noctur -->
+        <article class="proj proj-wide" data-reveal>
+          <div class="proj-body">
+            <header><h3>Noctur.io <span class="muted">&amp; earlier full-stack work</span></h3><span class="proj-kind">SaaS · 2024–25</span></header>
+            <p>Before the embedded and hardware focus, I shipped full-stack products end-to-end —
+            Nocturio (a creator/SMB SaaS), tooling dashboards, and assorted web apps. Real APIs,
+            auth, databases, and deployment pipelines. A few visuals:</p>
+            <div class="shots">
+              <a href="assets/noc-web1.jpg" target="_blank" rel="noopener"><img src="assets/noc-web1.jpg" alt="Nocturio website" loading="lazy" /></a>
+              <a href="assets/noctur-app.png" target="_blank" rel="noopener"><img src="assets/noctur-app.png" alt="Nocturio app tracker" loading="lazy" /></a>
+              <a href="assets/nocturio-phone-home.png" target="_blank" rel="noopener"><img src="assets/nocturio-phone-home.png" alt="Nocturio mobile" loading="lazy" /></a>
+              <a href="https://mesmac.github.io/pokemon-search/" target="_blank" rel="noopener"><img src="assets/poke-search.png" alt="Pokémon search app" loading="lazy" /></a>
             </div>
-        </main>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────────── STACK ───────────────── -->
+    <section id="stack" class="section">
+      <div class="section-head" data-reveal>
+        <span class="kicker">04 — Toolbox</span>
+        <h2>What I reach for.</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-col" data-reveal><h3>Languages</h3><ul><li>C / C++ / Embedded C</li><li>Verilog / SystemVerilog</li><li>Assembly</li><li>Python</li><li>TypeScript</li></ul></div>
+        <div class="stack-col" data-reveal><h3>MCUs &amp; platforms</h3><ul><li>PIC32MK · dsPIC33</li><li>Cortex-M · STM32</li><li>RP2040</li><li>i.MX8 / i.MX93</li><li>iCE40 FPGA</li></ul></div>
+        <div class="stack-col" data-reveal><h3>Protocols</h3><ul><li>CAN · CAN-FD</li><li>LIN · SENT</li><li>OBD-II · J1939</li><li>UART · SPI · I²C</li></ul></div>
+        <div class="stack-col" data-reveal><h3>Hardware</h3><ul><li>PCB design &amp; layout</li><li>Schematic capture</li><li>Signal integrity</li><li>HIL validation</li><li>Scopes · logic analyzers · JTAG</li></ul></div>
+        <div class="stack-col" data-reveal><h3>Embedded Linux</h3><ul><li>Yocto / OpenEmbedded</li><li>Qt / QML</li><li>systemd</li><li>Device-tree bring-up</li></ul></div>
+        <div class="stack-col" data-reveal><h3>Web &amp; tooling</h3><ul><li>Next.js / React</li><li>Laravel (TALL)</li><li>PostgreSQL / SQLite</li><li>Git · CI/CD</li></ul></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <p class="foot-name">Cameron Emery</p>
+        <p class="foot-sub">Embedded systems engineer · Augusta, Maine</p>
+      </div>
+      <ul class="foot-links">
+        <li><a href="mailto:cemerybusiness@gmail.com">Email</a></li>
+        <li><a href="https://github.com/mESmaC" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/cameronemery67" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="assets/Cameron_Emery_Resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
+      </ul>
     </div>
+    <p class="foot-fine">Built from scratch — static, no framework. <span class="mono">clack: continuously learn, continuously apply.</span></p>
+  </footer>
 </body>
 </html>
