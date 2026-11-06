@@ -1,29 +1,45 @@
-// Reveal-on-scroll for [data-reveal] elements, with a small stagger per section.
-const reveal = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      setTimeout(() => el.classList.add('in'), Math.min(i, 6) * 60);
-      reveal.unobserve(el);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Mobile Navigation Toggle
+  const navToggle = document.getElementById('navToggle');
+  const primaryNav = document.getElementById('primaryNav');
 
-document.querySelectorAll('[data-reveal]').forEach((el) => reveal.observe(el));
+  if (navToggle && primaryNav) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = primaryNav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
 
-// Active-section highlight in the nav.
-const navLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
-const idToLink = new Map(navLinks.map((a) => [a.getAttribute('href').slice(1), a]));
-const spy = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    const link = idToLink.get(entry.target.id);
-    if (link && entry.isIntersecting) {
-      navLinks.forEach((a) => a.style.color = '');
-      link.style.color = 'var(--ink)';
-    }
+    primaryNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        primaryNav.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // 2. Flagship System Category Filtering
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const systemCards = document.querySelectorAll('.system-card');
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter') || 'all';
+
+      filterButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      systemCards.forEach((card) => {
+        if (filter === 'all') {
+          card.classList.remove('is-hidden');
+          return;
+        }
+        const categories = (card.getAttribute('data-category') || '').split(/\s+/);
+        if (categories.includes(filter)) {
+          card.classList.remove('is-hidden');
+        } else {
+          card.classList.add('is-hidden');
+        }
+      });
+    });
   });
-}, { threshold: 0.4 });
-['about', 'work', 'projects', 'stack'].forEach((id) => {
-  const el = document.getElementById(id);
-  if (el) spy.observe(el);
 });
