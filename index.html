@@ -3,1037 +3,354 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cameron Emery — Systems, Embedded &amp; AI-Native Product Engineer</title>
-  <meta name="description" content="Systems, Embedded & AI-Native Product Engineer. Building full-stack applications, browser-native EDA tools, distributed Rust compute fabrics, formally verified kernels, and safety-critical automotive hardware/firmware." />
+  <title>Cameron Emery — Systems &amp; Embedded Engineer</title>
+  <meta name="description" content="Cameron Emery — systems, embedded and AI-native product engineer. Full-stack web apps and AI agents, Rust systems with Lean 4 proofs, and safety-critical automotive hardware." />
   <meta name="author" content="Cameron Emery" />
-  <meta property="og:title" content="Cameron Emery — Systems, Embedded & AI-Native Product Engineer" />
-  <meta property="og:description" content="End-to-end product, systems, and embedded engineering: TypeScript/React/Next.js, Rust, Lean 4 formal verification, custom LLM architectures, and safety-critical automotive hardware." />
+  <meta name="color-scheme" content="light dark" />
+  <meta property="og:title" content="Cameron Emery — Systems &amp; Embedded Engineer" />
+  <meta property="og:description" content="Full-stack web apps and AI agents, Rust systems with Lean 4 proofs, and safety-critical automotive hardware." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mesmac.github.io/" />
+  <meta property="og:image" content="https://mesmac.github.io/assets/profile.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3ECE%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Oxanium:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles/styles.css" />
 </head>
 <body>
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-vignette" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Top Telemetry Bar -->
-  <div class="telemetry-bar">
-    <div class="container telemetry-inner">
-      <div class="telemetry-left">
-        <span class="status-dot" aria-hidden="true"></span>
-        <span class="mono-label">SYS.ID // CAMERON_EMERY [mESmaC]</span>
-        <span class="telemetry-sep">/</span>
-        <span class="mono-dim">LOC: AUGUSTA, ME (US-EAST · REMOTE READY)</span>
-      </div>
-      <div class="telemetry-right">
-        <span class="mono-dim">VERIFICATION: LEAN 4 · QEMU FAULT-INJ · DRC/ERC · HIL BENCH</span>
-        <span class="telemetry-sep">/</span>
-        <a href="assets/Cameron_Emery_Resume.pdf" target="_blank" rel="noopener" class="telemetry-link">RESUME.PDF ↗</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Primary Navigation -->
-  <header class="site-header">
+  <header class="site-header" id="siteHeader">
     <div class="container nav-inner">
-      <a href="#top" class="brand" aria-label="Cameron Emery Home">
-        <span class="brand-bracket">[</span>
-        <span class="brand-name">CAMERON EMERY</span>
-        <span class="brand-bracket">]</span>
-        <span class="brand-sub">ENG_LAB // 2026</span>
-      </a>
+      <a href="#top" class="brand">Cameron Emery</a>
 
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <span></span><span></span>
       </button>
 
       <nav id="primaryNav" class="primary-nav" aria-label="Primary">
-        <a href="#systems" class="nav-link"><span class="nav-index">01.</span>Flagship Systems</a>
-        <a href="#hardware" class="nav-link"><span class="nav-index">02.</span>Production Hardware &amp; Experience</a>
-        <a href="#architecture" class="nav-link"><span class="nav-index">03.</span>Capabilities Matrix</a>
-        <a href="#contact" class="nav-link"><span class="nav-index">04.</span>Contact</a>
-        <a href="assets/Cameron_Emery_Resume.pdf" target="_blank" rel="noopener" class="btn btn-nav">
-          <span>Résumé PDF</span>
-          <span aria-hidden="true">↗</span>
-        </a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/Cameron_Emery_Resume.pdf" target="_blank" rel="noopener" class="btn btn-small">Résumé</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
-    <!-- Hero Blueprint Section -->
-    <section class="hero-section">
-      <div class="container hero-grid">
-        <div class="hero-main">
-          <div class="eyebrow-row">
-            <span class="badge badge-accent">SYSTEMS · EMBEDDED · AI-NATIVE PRODUCT ENGINEER</span>
-            <span class="badge badge-outline">FULL-STACK TO SILICON</span>
-          </div>
-
-          <h1 class="hero-title">
-            End-to-end engineering from <span class="text-accent">full-stack software &amp; AI agents</span> down to <span class="text-cyan">verified systems &amp; hardware</span>.
-          </h1>
-
-          <p class="hero-lead">
-            I take ambiguous, high-leverage problems from first conversation and architecture all the way to shipped product. Whether building browser-native TypeScript/React CAD tools with MCP agent interfaces, distributed Rust compute fabrics with Lean 4 proofs, or safety-critical automotive MCU+FPGA+FPAA hardware on the bench, I operate as a self-contained engineering unit.
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Software &amp; Systems Engineer · Augusta, Maine</p>
+          <h1>I build things end to end — from web apps and AI agents down to firmware and circuit boards.</h1>
+          <p class="lead">
+            I'm Cameron, the sole software and systems engineer at
+            <strong>Electronic Mobility Controls</strong>, where I design drive-by-wire firmware, PCBs and
+            embedded Linux for adaptive vehicles. On my own time I build Rust systems, formally verified
+            with Lean 4, and train custom language models.
           </p>
-
           <div class="hero-actions">
-            <a href="#systems" class="btn btn-primary">
-              <span>Inspect Flagship Systems</span>
-              <span aria-hidden="true">↓</span>
-            </a>
-            <a href="https://github.com/mESmaC" target="_blank" rel="noopener" class="btn btn-secondary">
-              <span>GitHub (@mESmaC)</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a href="https://huggingface.co/mesmac" target="_blank" rel="noopener" class="btn btn-secondary">
-              <span>Hugging Face (mesmac)</span>
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a href="assets/Cameron_Emery_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
-              <span>Download 1-Page Résumé</span>
-              <span aria-hidden="true">↗</span>
-            </a>
+            <a href="mailto:cemerybusiness@gmail.com" class="btn btn-primary">Get in touch</a>
+            <a href="assets/Cameron_Emery_Resume.pdf" target="_blank" rel="noopener" class="btn btn-secondary">View résumé</a>
           </div>
-
-          <div class="hero-metrics" role="list" aria-label="Engineering summary metrics">
-            <div class="metric-cell" role="listitem">
-              <span class="metric-id">DOM_01 // FULL-STACK &amp; AI</span>
-              <strong class="metric-val">TypeScript · React · Next.js · MCP</strong>
-              <span class="metric-sub">End-to-end product UI, PostgreSQL/SQLite, REST APIs, and multi-tool AI agent servers</span>
-            </div>
-            <div class="metric-cell" role="listitem">
-              <span class="metric-id">DOM_02 // SYSTEMS &amp; PROOFS</span>
-              <strong class="metric-val">Rust · Lean 4 · x86_64 Kernel</strong>
-              <span class="metric-sub">Distributed ML sharding, freestanding SMP OS kernel, and machine-checked invariants</span>
-            </div>
-            <div class="metric-cell" role="listitem">
-              <span class="metric-id">DOM_03 // EMBEDDED &amp; EDA</span>
-              <strong class="metric-val">S32K344 · iCE40 FPGA · Yocto</strong>
-              <span class="metric-sub">Sole engineer shipping drive-by-wire automotive firmware, PCBs, and Embedded Linux</span>
-            </div>
-          </div>
+          <ul class="social-links" aria-label="Profiles">
+            <li><a href="https://github.com/mESmaC" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://huggingface.co/mesmac" target="_blank" rel="noopener">Hugging Face</a></li>
+            <li><a href="https://www.linkedin.com/in/cameronemery67" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
         </div>
-
-        <!-- Right-side System Specification Panel -->
-        <aside class="spec-panel" aria-label="System Architecture Dossier">
-          <div class="panel-header">
-            <span class="panel-code">SPEC_SHEET // ENG_PROFILE_v2026.4</span>
-            <span class="panel-tag">VERIFIED</span>
-          </div>
-
-          <div class="spec-body">
-            <div class="spec-block">
-              <div class="spec-label">OPERATING MODEL</div>
-              <div class="spec-value">Single-engineer ownership across product discovery, UX/UI, backend/database architecture, AI automation, and hardware/firmware validation.</div>
-            </div>
-
-            <div class="spec-divider"></div>
-
-            <div class="spec-kv-grid">
-              <div class="spec-kv">
-                <span class="kv-key">CURRENT ROLE</span>
-                <span class="kv-val">Software &amp; Systems Engineer (Sole Engineer) @ Electronic Mobility Controls</span>
-              </div>
-              <div class="spec-kv">
-                <span class="kv-key">PRIMARY LANGUAGES</span>
-                <span class="kv-val">TypeScript / JS, Rust, C / C++, Python, SQL, Verilog, Lean 4</span>
-              </div>
-              <div class="spec-kv">
-                <span class="kv-key">PRODUCT &amp; WEB</span>
-                <span class="kv-val">React 19, Next.js, Node.js, FastAPI, PostgreSQL, Prisma, Tailwind, SVG/Canvas</span>
-              </div>
-              <div class="spec-kv">
-                <span class="kv-key">AI &amp; AUTOMATION</span>
-                <span class="kv-val">Model Context Protocol (MCP), Claude Code, LLM Agents, PyTorch, SafeTensors</span>
-              </div>
-              <div class="spec-kv">
-                <span class="kv-key">UPSTREAM OSS</span>
-                <span class="kv-val">Active Contributor — Tenstorrent (<code>tt-metal</code>) &amp; T3 Code (<code>pingdotgg/t3code</code>)</span>
-              </div>
-              <div class="spec-kv">
-                <span class="kv-key">HARDWARE &amp; OS</span>
-                <span class="kv-val">NXP S32K344, Lattice iCE40UP5K, Okika FPAA, Yocto/BitBake, CAN-FD/LIN/SENT, KiCad</span>
-              </div>
-            </div>
-
-            <div class="spec-divider"></div>
-
-            <div class="spec-diagram-box">
-              <div class="diagram-caption">
-                <span>STACK_TOPOLOGY // CROSS-LAYER COVERAGE</span>
-                <span>L7 → L0</span>
-              </div>
-              <svg class="hero-topology-svg" viewBox="0 0 420 168" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cross-layer engineering topology from React and MCP agents down to Rust systems, Lean 4 proofs, and MCU/FPGA hardware">
-                <!-- Layer 1: Product & AI Agents -->
-                <rect x="8" y="8" width="404" height="32" rx="3" fill="#0F172A" stroke="#38BDF8" stroke-width="1"/>
-                <text x="18" y="28" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">L4 // PRODUCT &amp; AI</text>
-                <text x="155" y="28" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="10">React · TypeScript · Next.js · MCP Servers · REST/SQL</text>
-
-                <!-- Connector -->
-                <line x1="210" y1="40" x2="210" y2="48" stroke="#475569" stroke-width="1.2"/>
-
-                <!-- Layer 2: Distributed Systems & ML -->
-                <rect x="8" y="48" width="404" height="32" rx="3" fill="#0F172A" stroke="#64748B" stroke-width="1"/>
-                <text x="18" y="68" fill="#93C5FD" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">L3 // DISTRIBUTED</text>
-                <text x="155" y="68" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="10">Rust · Tokio · SafeTensors Sharding · PyTorch · NVFP4</text>
-
-                <!-- Connector -->
-                <line x1="210" y1="80" x2="210" y2="88" stroke="#475569" stroke-width="1.2"/>
-
-                <!-- Layer 3: Formal Verification & OS Kernel -->
-                <rect x="8" y="88" width="404" height="32" rx="3" fill="#0F172A" stroke="#64748B" stroke-width="1"/>
-                <text x="18" y="108" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">L2 // KERNEL &amp; PROOF</text>
-                <text x="155" y="108" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="10">Lean 4 Theorems · x86_64 no_std SMP · DRC/ERC Engines</text>
-
-                <!-- Connector -->
-                <line x1="210" y1="120" x2="210" y2="128" stroke="#475569" stroke-width="1.2"/>
-
-                <!-- Layer 4: Silicon & Automotive Hardware -->
-                <rect x="8" y="128" width="404" height="32" rx="3" fill="#0F172A" stroke="#F59E0B" stroke-width="1"/>
-                <text x="18" y="148" fill="#FBBF24" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">L1 // BENCH &amp; SILICON</text>
-                <text x="155" y="148" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="10">S32K344 · iCE40 FPGA · Okika FPAA · CAN-FD / SENT · PCB</text>
-              </svg>
-            </div>
-
-            <div class="spec-links">
-              <a href="https://github.com/mESmaC" target="_blank" rel="noopener" class="spec-chip">github.com/mESmaC ↗</a>
-              <a href="https://huggingface.co/mesmac" target="_blank" rel="noopener" class="spec-chip">huggingface.co/mesmac ↗</a>
-              <a href="https://www.linkedin.com/in/cameronemery67" target="_blank" rel="noopener" class="spec-chip">LinkedIn ↗</a>
-              <a href="mailto:cemerybusiness@gmail.com" class="spec-chip">cemerybusiness@gmail.com</a>
-            </div>
-          </div>
-        </aside>
+        <img class="hero-photo" src="assets/profile.jpg" alt="Portrait of Cameron Emery" width="800" height="800" />
       </div>
     </section>
 
-    <!-- 01. Flagship Systems Section -->
-    <section id="systems" class="section">
+    <!-- Selected work -->
+    <section class="section" id="work">
       <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="section-eyebrow">01 // OPEN-SOURCE FLAGSHIP SYSTEMS</div>
-            <h2 class="section-title">Architected, Built &amp; Verified End-to-End</h2>
-          </div>
-          <p class="section-desc">
-            Five production-grade systems spanning browser-native TypeScript/React CAD with MCP agent control, formally verified distributed Rust ML compute, custom LLM architectures, a freestanding <code>x86_64</code> OS kernel, and cryptographic provenance analysis.
-          </p>
+        <div class="section-head">
+          <h2>Selected work</h2>
+          <p>Open-source systems I've designed, built and tested on my own.</p>
         </div>
 
-        <!-- Filter Controls -->
-        <div class="filter-bar" role="toolbar" aria-label="Filter flagship systems by domain">
-          <button class="filter-btn active" data-filter="all">ALL SYSTEMS [05]</button>
-          <button class="filter-btn" data-filter="fullstack">FULL-STACK · EDA · MCP</button>
-          <button class="filter-btn" data-filter="rust">RUST · DISTRIBUTED · OS</button>
-          <button class="filter-btn" data-filter="ai">AI / ML · FORMAL PROOFS</button>
-        </div>
-
-        <div class="systems-list">
-          <!-- SYSTEM 01: ELECTRACE -->
-          <article class="system-card" data-category="fullstack ai">
-            <div class="system-topbar">
-              <div class="system-id-group">
-                <span class="sys-num">SYS_01</span>
-                <span class="sys-domain">FULL-STACK WEB CAD · EDA · MODEL CONTEXT PROTOCOL (MCP)</span>
-              </div>
-              <div class="system-links">
-                <a href="https://github.com/mESmaC/electrace" target="_blank" rel="noopener" class="sys-repo-link">
-                  <span>github.com/mESmaC/electrace</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
+        <div class="projects">
+          <article class="project">
+            <div class="project-meta">
+              <h3><a href="https://github.com/mESmaC/electrace" target="_blank" rel="noopener">Electrace</a></h3>
+              <p class="project-tagline">Browser-based schematic &amp; PCB design with an AI agent interface</p>
+              <ul class="tags">
+                <li>TypeScript</li><li>React</li><li>Next.js</li><li>PostgreSQL</li><li>MCP</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/mESmaC/electrace" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
               </div>
             </div>
-
-            <div class="system-grid">
-              <div class="system-content">
-                <h3 class="system-name">
-                  <a href="https://github.com/mESmaC/electrace" target="_blank" rel="noopener">Electrace</a>
-                  <span class="system-subtitle">Browser-Native Schematic Capture, Multi-Layer PCB Layout &amp; AI-Driven EDA Suite</span>
-                </h3>
-
-                <p class="system-summary">
-                  A full-stack electronic design automation (EDA) platform built in TypeScript, React, and Next.js that unifies schematic capture, transitive power-rail propagation, multi-layer PCB routing, deterministic Design Rule Checking (DRC), native KiCad export, and a 20+ tool Model Context Protocol (MCP) server for autonomous hardware design agents.
-                </p>
-
-                <ul class="system-bullets">
-                  <li>
-                    <strong>Custom SVG Geometry &amp; Multi-Layer PCB Canvas:</strong> Engineered a zero-dependency interactive schematic and multi-layer PCB layout canvas featuring orthogonal/45° trace routing, copper pour polygon generation with thermal reliefs, net-highlighting, and spatial hit-testing.
-                  </li>
-                  <li>
-                    <strong>Deterministic ERC, DRC &amp; Transitive Power Propagation:</strong> Built graph-based electrical rule checking (ERC) and physical design rule checking (DRC) validating trace-to-trace clearance, pad annular rings, drill constraints, unrouted ratlines, and voltage propagation across passive networks.
-                  </li>
-                  <li>
-                    <strong>20+ Tool MCP Server &amp; Native KiCad Export:</strong> Exposed the entire schematic/PCB state machine via a Model Context Protocol (MCP) server so AI agents can synthesize circuits, place footprints, route nets, inspect DRC violations in a closed loop, and export production-ready <code>.kicad_sch</code> and <code>.kicad_pcb</code> files.
-                  </li>
-                </ul>
-
-                <div class="tech-tags">
-                  <span class="tech-tag">TypeScript</span>
-                  <span class="tech-tag">React</span>
-                  <span class="tech-tag">Next.js</span>
-                  <span class="tech-tag">PostgreSQL / Prisma</span>
-                  <span class="tech-tag">SVG Geometry Engine</span>
-                  <span class="tech-tag">Model Context Protocol (MCP)</span>
-                  <span class="tech-tag">DRC / ERC Verification</span>
-                  <span class="tech-tag">KiCad S-Expression Export</span>
-                </div>
-              </div>
-
-              <div class="system-blueprint">
-                <div class="blueprint-header">
-                  <span>ARCH_FIG_01 // ELECTRACE_PIPELINE</span>
-                  <span>TS · REACT · MCP · KICAD</span>
-                </div>
-                <svg class="blueprint-svg" viewBox="0 0 460 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Electrace architecture diagram showing Schematic Netlist Graph, Transitive Power & ERC Engine, Multi-Layer PCB Canvas & DRC, KiCad Export, and 20+ Tool MCP Server">
-                  <rect x="12" y="14" width="200" height="54" rx="3" fill="#0B1220" stroke="#38BDF8" stroke-width="1.2"/>
-                  <text x="24" y="34" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">01 // SCHEMATIC GRAPH</text>
-                  <text x="24" y="50" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9.5">Symbols · Pins · Netlist AST</text>
-
-                  <rect x="248" y="14" width="200" height="54" rx="3" fill="#0B1220" stroke="#34D399" stroke-width="1.2"/>
-                  <text x="260" y="34" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">02 // ERC &amp; POWER PROP</text>
-                  <text x="260" y="50" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9.5">Transitive Rail Solver · Pin Rules</text>
-
-                  <line x1="212" y1="41" x2="248" y2="41" stroke="#38BDF8" stroke-width="1.2"/>
-
-                  <rect x="12" y="96" width="200" height="60" rx="3" fill="#0B1220" stroke="#94A3B8" stroke-width="1.2"/>
-                  <text x="24" y="116" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">03 // MULTI-LAYER PCB</text>
-                  <text x="24" y="132" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9.5">Footprints · Traces · Vias</text>
-                  <text x="24" y="146" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="9">Copper Pours &amp; Ratline Solver</text>
-
-                  <rect x="248" y="96" width="200" height="60" rx="3" fill="#0B1220" stroke="#F59E0B" stroke-width="1.2"/>
-                  <text x="260" y="116" fill="#FBBF24" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">04 // DETERMINISTIC DRC</text>
-                  <text x="260" y="132" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9.5">Clearance · Annular Rings</text>
-                  <text x="260" y="146" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="9">Net Short &amp; Unrouted Checks</text>
-
-                  <line x1="348" y1="68" x2="112" y2="96" stroke="#64748B" stroke-width="1" stroke-dasharray="3 3"/>
-                  <line x1="212" y1="126" x2="248" y2="126" stroke="#F59E0B" stroke-width="1.2"/>
-
-                  <rect x="12" y="184" width="270" height="52" rx="3" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2"/>
-                  <text x="24" y="204" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">05 // 20+ TOOL MCP AGENT SERVER</text>
-                  <text x="24" y="222" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9.5">Closed-Loop AI Synthesis ↔ DRC Fix</text>
-
-                  <rect x="298" y="184" width="150" height="52" rx="3" fill="#0F172A" stroke="#34D399" stroke-width="1.2"/>
-                  <text x="310" y="204" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">06 // FAB EXPORT</text>
-                  <text x="310" y="222" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9.5">.kicad_pcb / .kicad_sch</text>
-
-                  <line x1="112" y1="156" x2="112" y2="184" stroke="#38BDF8" stroke-width="1.2"/>
-                  <line x1="348" y1="156" x2="348" y2="184" stroke="#34D399" stroke-width="1.2"/>
-                </svg>
-                <div class="blueprint-footer">
-                  <span>VERIFICATION: DETERMINISTIC DRC + KICAD S-EXPR PARITY</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- SYSTEM 02: KADMIUM -->
-          <article class="system-card" data-category="rust ai">
-            <div class="system-topbar">
-              <div class="system-id-group">
-                <span class="sys-num">SYS_02</span>
-                <span class="sys-domain">RUST DISTRIBUTED SYSTEMS · AI/ML COMPUTE FABRIC · LEAN 4 FORMAL VERIFICATION</span>
-              </div>
-              <div class="system-links">
-                <a href="https://github.com/mESmaC/Kadmium" target="_blank" rel="noopener" class="sys-repo-link">
-                  <span>github.com/mESmaC/Kadmium</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="system-grid">
-              <div class="system-content">
-                <h3 class="system-name">
-                  <a href="https://github.com/mESmaC/Kadmium" target="_blank" rel="noopener">Kadmium (Cd-48)</a>
-                  <span class="system-subtitle">100% Rust Distributed AI/ML Compute Fabric with Lean 4 Formal Equivalence Proofs</span>
-                </h3>
-
-                <p class="system-summary">
-                  Inspired by BOINC and CERN's Worldwide LHC Computing Grid, Kadmium is a 100% Rust distributed compute fabric that slices large transformer training and inference workloads across heterogeneous consumer and datacenter nodes—backed by machine-checked Lean 4 proofs that distributed layer-sharded execution is mathematically identical to single-node execution.
-                </p>
-
-                <ul class="system-bullets">
-                  <li>
-                    <strong>Native SafeTensors Layer-Sliced Decoder:</strong> Implemented a pure-Rust transformer shard runtime supporting Llama, Mistral, and Qwen families that streams only assigned contiguous layer slices (<code>[L_a .. L_b)</code>) from Hugging Face SafeTensors indexes without materializing full model weights in RAM/VRAM.
-                  </li>
-                  <li>
-                    <strong>Heterogeneous Shard Planner &amp; Fault-Tolerant Relay:</strong> Built a capability-aware coordinator that assigns layer ranges proportional to each node's free VRAM and bandwidth, orchestrating signed activation handoffs and automatic shard re-routing on worker dropout.
-                  </li>
-                  <li>
-                    <strong>Lean 4 Formal Verification + Bit-Identical Cut Parity:</strong> Authored a zero-<code>sorry</code> Lean 4 proof suite (<code>Kadmium.Native.runChain_eq_runLayers</code>) proving compositional equivalence across arbitrary partition boundaries, paired with Rust tests verifying <code>max_abs_diff = 0.0</code> across single-cut and multi-cut execution.
-                  </li>
-                </ul>
-
-                <div class="tech-tags">
-                  <span class="tech-tag">Rust</span>
-                  <span class="tech-tag">Tokio Async</span>
-                  <span class="tech-tag">Lean 4 Theorem Prover</span>
-                  <span class="tech-tag">SafeTensors</span>
-                  <span class="tech-tag">Llama / Mistral / Qwen</span>
-                  <span class="tech-tag">Pipeline Parallelism</span>
-                  <span class="tech-tag">Blake3 / Ed25519</span>
-                </div>
-              </div>
-
-              <div class="system-blueprint">
-                <div class="blueprint-header">
-                  <span>ARCH_FIG_02 // KADMIUM_SHARD_CHAIN</span>
-                  <span>RUST · SAFETENSORS · LEAN 4</span>
-                </div>
-                <svg class="blueprint-svg" viewBox="0 0 460 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Kadmium distributed layer-sliced execution diagram with Lean 4 formal theorem runChain_eq_runLayers">
-                  <!-- Coordinator -->
-                  <rect x="12" y="14" width="436" height="46" rx="3" fill="#0B1220" stroke="#38BDF8" stroke-width="1.2"/>
-                  <text x="24" y="33" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">COORDINATOR // HETEROGENEOUS VRAM SHARD PLANNER</text>
-                  <text x="24" y="49" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9.5">SafeTensors Index Parser · Capability Probing · Signed Lease Routing</text>
-
-                  <!-- Workers Row -->
-                  <rect x="12" y="84" width="132" height="68" rx="3" fill="#0B1220" stroke="#94A3B8" stroke-width="1.2"/>
-                  <text x="22" y="104" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600">NODE_01 (8GB VRAM)</text>
-                  <text x="22" y="122" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="9">Embed + Layers [0..k₁)</text>
-                  <text x="22" y="138" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">RoPE · GQA · SwiGLU</text>
-
-                  <rect x="164" y="84" width="132" height="68" rx="3" fill="#0B1220" stroke="#94A3B8" stroke-width="1.2"/>
-                  <text x="174" y="104" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600">NODE_02 (12GB VRAM)</text>
-                  <text x="174" y="122" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="9">Layers [k₁..k₂)</text>
-                  <text x="174" y="138" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">KV-Cache · Activation Hop</text>
-
-                  <rect x="316" y="84" width="132" height="68" rx="3" fill="#0B1220" stroke="#94A3B8" stroke-width="1.2"/>
-                  <text x="326" y="104" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600">NODE_03 (16GB VRAM)</text>
-                  <text x="326" y="122" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="9">Layers [k₂..N) + Norm</text>
-                  <text x="326" y="138" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">LM Head · Token Sample</text>
-
-                  <line x1="144" y1="118" x2="164" y2="118" stroke="#38BDF8" stroke-width="1.4"/>
-                  <line x1="296" y1="118" x2="316" y2="118" stroke="#38BDF8" stroke-width="1.4"/>
-
-                  <!-- Lean 4 Proof Box -->
-                  <rect x="12" y="176" width="436" height="60" rx="3" fill="#0A191E" stroke="#34D399" stroke-width="1.2"/>
-                  <text x="24" y="196" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">LEAN 4 FORMAL PROOF // Kadmium.Native.runChain_eq_runLayers</text>
-                  <text x="24" y="214" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="9.5">∀ (cuts : List Nat) (x : Tensor), runChain (sliceModel W cuts) x = runLayers W x</text>
-                  <text x="24" y="228" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">0 sorry axioms · Rust Cut-Invariance Test: max_abs_diff == 0.0f32</text>
-                </svg>
-                <div class="blueprint-footer">
-                  <span>PROOF STATUS: 0 SORRY AXIOMS · BIT-IDENTICAL FP32 PARITY</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- SYSTEM 03: MCL4-COE & NCM -->
-          <article class="system-card" data-category="ai">
-            <div class="system-topbar">
-              <div class="system-id-group">
-                <span class="sys-num">SYS_03</span>
-                <span class="sys-domain">LLM ARCHITECTURE · SPARSE ATTENTION · 12 GB CONSUMER-GPU PRETRAINING</span>
-              </div>
-              <div class="system-links">
-                <a href="https://github.com/mESmaC/mcl4-coe-ncm" target="_blank" rel="noopener" class="sys-repo-link">
-                  <span>github.com/mESmaC/mcl4-coe-ncm</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-                <a href="https://huggingface.co/mesmac" target="_blank" rel="noopener" class="sys-repo-link">
-                  <span>huggingface.co/mesmac</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="system-grid">
-              <div class="system-content">
-                <h3 class="system-name">
-                  <a href="https://github.com/mESmaC/mcl4-coe-ncm" target="_blank" rel="noopener">MCL4-COE &amp; NCM</a>
-                  <span class="system-subtitle">Markov-Chain Local-4 Attention, Cognitive Operator Ensemble &amp; Pretrained 2.43B / 1.77B Models</span>
-                </h3>
-
-                <p class="system-summary">
-                  A custom large language model family engineered from first principles to train multi-billion-parameter reasoning architectures on a single 12 GB consumer GPU. Combines Markov-Chain Local-4 (<code>MCL4</code>) sparse attention, a Causal Encoder-Decoder (<code>CED</code>) Mixture-of-Experts backbone, and a 9-operator single-softmax Cognitive Operator Ensemble (<code>COE</code>).
-                </p>
-
-                <ul class="system-bullets">
-                  <li>
-                    <strong>MCL4 Sparse Attention &amp; CED MoE Backbone:</strong> Designed a 4-state Markov transition regime over local sliding windows and global anchor tokens paired with a Causal Encoder-Decoder Mixture-of-Experts block for linear-memory long-context scaling.
-                  </li>
-                  <li>
-                    <strong>Single-Softmax Cognitive Operator Ensemble (COE):</strong> Replaced monolithic next-token projection with 9 specialized cognitive operator heads (<code>SCAN</code>, <code>ALIGN</code>, <code>INFER</code>, <code>PLAN</code>, <code>VERIFY</code>, <code>REVISE</code>, <code>ABSTRACT</code>, <code>SYNTHESIZE</code>, <code>COMMIT</code>) fused under a single normalized mixture distribution.
-                  </li>
-                  <li>
-                    <strong>12 GB Consumer-GPU Training Engine &amp; Published Checkpoints:</strong> Built a custom <code>CPUOffloadAdamW</code> optimizer, activation checkpointing, and <code>NVFP4</code> 2:4 structured sparsity pipeline to pretrain and publish <strong>2.43B</strong> and <strong>1.77B</strong> parameter models on Hugging Face.
-                  </li>
-                </ul>
-
-                <div class="tech-tags">
-                  <span class="tech-tag">PyTorch</span>
-                  <span class="tech-tag">CUDA / Mixed Precision</span>
-                  <span class="tech-tag">NVFP4 (2:4 Sparsity)</span>
-                  <span class="tech-tag">Mixture-of-Experts (MoE)</span>
-                  <span class="tech-tag">CPUOffloadAdamW</span>
-                  <span class="tech-tag">Hugging Face Weights</span>
-                </div>
-              </div>
-
-              <div class="system-blueprint">
-                <div class="blueprint-header">
-                  <span>ARCH_FIG_03 // MCL4_CED_COE_STACK</span>
-                  <span>2.43B &amp; 1.77B · 12GB VRAM</span>
-                </div>
-                <svg class="blueprint-svg" viewBox="0 0 460 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MCL4-COE and NCM architecture diagram showing Markov-Chain Local-4 attention, Causal Encoder-Decoder MoE, and 9-head Cognitive Operator Ensemble">
-                  <rect x="12" y="14" width="206" height="62" rx="3" fill="#0B1220" stroke="#38BDF8" stroke-width="1.2"/>
-                  <text x="24" y="34" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">01 // MCL4 SPARSE ATTENTION</text>
-                  <text x="24" y="50" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">4-State Markov Regime</text>
-                  <text x="24" y="64" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Local-4 Window + Global Anchors</text>
-
-                  <rect x="242" y="14" width="206" height="62" rx="3" fill="#0B1220" stroke="#A78BFA" stroke-width="1.2"/>
-                  <text x="254" y="34" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">02 // CED MoE BACKBONE</text>
-                  <text x="254" y="50" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Causal Encoder-Decoder</text>
-                  <text x="254" y="64" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Top-K Routed Expert FFN Blocks</text>
-
-                  <line x1="218" y1="45" x2="242" y2="45" stroke="#38BDF8" stroke-width="1.2"/>
-
-                  <rect x="12" y="96" width="436" height="64" rx="3" fill="#0B1220" stroke="#34D399" stroke-width="1.2"/>
-                  <text x="24" y="116" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">03 // 9-HEAD COGNITIVE OPERATOR ENSEMBLE (SINGLE-SOFTMAX COE)</text>
-                  <text x="24" y="134" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="9">[SCAN · ALIGN · INFER · PLAN · VERIFY · REVISE · ABSTRACT · SYNTHESIZE · COMMIT]</text>
-                  <text x="24" y="149" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Convex Operator Gate π(h) → Unified Token Distribution</text>
-
-                  <rect x="12" y="180" width="436" height="56" rx="3" fill="#0F172A" stroke="#F59E0B" stroke-width="1.2"/>
-                  <text x="24" y="200" fill="#FBBF24" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">04 // 12GB VRAM TRAINING ENGINE &amp; HUGGING FACE WEIGHTS</text>
-                  <text x="24" y="218" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">CPUOffloadAdamW · NVFP4 2:4 Structured Sparsity · 2.43B &amp; 1.77B Checkpoints</text>
-                </svg>
-                <div class="blueprint-footer">
-                  <span>WEIGHTS PUBLISHED: HUGGINGFACE.CO/MESMAC</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- SYSTEM 04: MIRROR OS KERNEL -->
-          <article class="system-card" data-category="rust">
-            <div class="system-topbar">
-              <div class="system-id-group">
-                <span class="sys-num">SYS_04</span>
-                <span class="sys-domain">BARE-METAL OPERATING SYSTEM KERNEL · x86_64 SMP · RUST NO_STD</span>
-              </div>
-              <div class="system-links">
-                <a href="https://github.com/mESmaC/Mirror" target="_blank" rel="noopener" class="sys-repo-link">
-                  <span>github.com/mESmaC/Mirror</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="system-grid">
-              <div class="system-content">
-                <h3 class="system-name">
-                  <a href="https://github.com/mESmaC/Mirror" target="_blank" rel="noopener">Mirror</a>
-                  <span class="system-subtitle">Freestanding <code>x86_64-unknown-none</code> SMP Operating System Kernel in Rust</span>
-                </h3>
-
-                <p class="system-summary">
-                  A freestanding 64-bit operating system kernel written in <code>no_std</code> Rust and <code>x86_64</code> assembly. Implements multi-core APIC bring-up, isolated per-process 4-level page tables, hardware memory-protection enforcement, a 35-syscall Ring-3 userland ABI, storage/network/USB device drivers, and deterministic fault-injection verification.
-                </p>
-
-                <ul class="system-bullets">
-                  <li>
-                    <strong>Memory Isolation &amp; 4-Core SMP Synchronization:</strong> Engineered per-process 4-level page tables with copy-on-write <code>fork</code>, demand paging, guard pages, and hardware enforcement of <code>NX</code>, <code>WP</code>, <code>UMIP</code>, <code>SMEP</code>, and <code>SMAP</code>, plus 4-CPU APIC scheduling and synchronous IPI TLB shootdowns.
-                  </li>
-                  <li>
-                    <strong>35-Syscall Ring-3 Userland &amp; Driver Stack:</strong> Implemented <code>SYSCALL/SYSRET</code> context switching, ELF64 binary loading, UNIX signals, pipes, non-blocking <code>poll</code>, and drivers for <code>VirtIO-Blk</code>, <code>VirtIO-Net</code>, <code>AHCI SATA</code>, and <code>xHCI USB2</code> input.
-                  </li>
-                  <li>
-                    <strong>156 Automated QEMU Smoke &amp; Fault-Injection Boots:</strong> Verified crash-consistent journaled filesystem recovery, page-fault isolation, and syscall boundary security across 156 automated QEMU boot and fault-injection test harnesses.
-                  </li>
-                </ul>
-
-                <div class="tech-tags">
-                  <span class="tech-tag">Rust (no_std)</span>
-                  <span class="tech-tag">x86_64 Assembly</span>
-                  <span class="tech-tag">UEFI / Limine</span>
-                  <span class="tech-tag">SMP APIC / TLB Shootdown</span>
-                  <span class="tech-tag">SMEP / SMAP / UMIP</span>
-                  <span class="tech-tag">VirtIO / AHCI / xHCI</span>
-                  <span class="tech-tag">156 QEMU Test Boots</span>
-                </div>
-              </div>
-
-              <div class="system-blueprint">
-                <div class="blueprint-header">
-                  <span>ARCH_FIG_04 // MIRROR_KERNEL_RINGS</span>
-                  <span>x86_64-UNKNOWN-NONE · SMP</span>
-                </div>
-                <svg class="blueprint-svg" viewBox="0 0 460 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mirror x86_64 Rust OS kernel architecture showing Ring 3 userland, 35-syscall ABI boundary, Ring 0 SMP scheduler and memory manager, and hardware drivers">
-                  <!-- Ring 3 Userland -->
-                  <rect x="12" y="14" width="436" height="48" rx="3" fill="#0B1220" stroke="#38BDF8" stroke-width="1.2"/>
-                  <text x="24" y="34" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">RING 3 USERLAND // ELF64 PROCESSES · SHELL · PIPES · SIGNALS</text>
-                  <text x="24" y="50" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">35-Syscall ABI (SYSCALL/SYSRET) · Guarded User Pointers (SMAP/SMEP)</text>
-
-                  <!-- Ring 0 Core -->
-                  <rect x="12" y="80" width="212" height="74" rx="3" fill="#0B1220" stroke="#34D399" stroke-width="1.2"/>
-                  <text x="24" y="100" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">RING 0 // VMM &amp; PAGING</text>
-                  <text x="24" y="118" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">4-Level Page Tables · CoW Fork</text>
-                  <text x="24" y="134" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">NX · WP · UMIP · SMEP · SMAP</text>
-
-                  <rect x="236" y="80" width="212" height="74" rx="3" fill="#0B1220" stroke="#34D399" stroke-width="1.2"/>
-                  <text x="248" y="100" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">RING 0 // 4-CPU APIC SMP</text>
-                  <text x="248" y="118" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Per-CPU Runqueues · Preemption</text>
-                  <text x="248" y="134" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Sync IPI TLB Shootdowns</text>
-
-                  <!-- Drivers & Verification -->
-                  <rect x="12" y="172" width="436" height="64" rx="3" fill="#0F172A" stroke="#F59E0B" stroke-width="1.2"/>
-                  <text x="24" y="192" fill="#FBBF24" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">STORAGE, BUS &amp; FAULT-INJECTION HARNESS</text>
-                  <text x="24" y="210" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">VirtIO-Blk · VirtIO-Net · AHCI SATA · xHCI USB2 HID · Journaled VFS</text>
-                  <text x="24" y="225" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Verified across 156 automated QEMU smoke &amp; deterministic fault-injection boots</text>
-                </svg>
-                <div class="blueprint-footer">
-                  <span>HARNESS: 156 AUTOMATED QEMU SMOKE &amp; FAULT-INJECTION BOOTS</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- SYSTEM 05: OIA (OPEN INTELLIGENCE AGENCY) -->
-          <article class="system-card" data-category="rust ai">
-            <div class="system-topbar">
-              <div class="system-id-group">
-                <span class="sys-num">SYS_05</span>
-                <span class="sys-domain">RUST ANALYTICS WORKSPACE · CRYPTOGRAPHIC PROVENANCE · LEAN 4 INVARIANTS</span>
-              </div>
-              <div class="system-links">
-                <a href="https://github.com/mESmaC/oia" target="_blank" rel="noopener" class="sys-repo-link">
-                  <span>github.com/mESmaC/oia</span>
-                  <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="system-grid">
-              <div class="system-content">
-                <h3 class="system-name">
-                  <a href="https://github.com/mESmaC/oia" target="_blank" rel="noopener">OIA (Open Intelligence Agency)</a>
-                  <span class="system-subtitle">Formally Specified Public-Intelligence, Document Lineage &amp; Privacy-Exposure Suite</span>
-                </h3>
-
-                <p class="system-summary">
-                  A local-first multi-crate Rust research platform for auditing personal privacy exposure and correlating public-record corpora, corporate filings, and geospatial/celestial telemetry—engineered so every analytical claim maintains cryptographic byte-offset lineage and formally proved bounded-memory invariants.
-                </p>
-
-                <ul class="system-bullets">
-                  <li>
-                    <strong>Content-Addressed Provenance &amp; Document Lineage:</strong> Built a deterministic ingestion and entity-resolution graph that links every extracted entity, timeline event, and correlation score back to exact byte spans and SHA-256 digests of source documents.
-                  </li>
-                  <li>
-                    <strong>Multi-Modal Analysis Kernels:</strong> Implemented specialized Rust crates for corporate filing graph traversal, camera/sky/celestial geometry verification, and automated personal data-broker exposure auditing.
-                  </li>
-                  <li>
-                    <strong>Lean 4 Formal Specifications:</strong> Paired core ingestion and redaction engines with Lean 4 formal specifications verifying bounded-memory streaming limits, lineage completeness, and monotonic privacy redaction guarantees.
-                  </li>
-                </ul>
-
-                <div class="tech-tags">
-                  <span class="tech-tag">Rust Workspace</span>
-                  <span class="tech-tag">Lean 4 Specifications</span>
-                  <span class="tech-tag">Cryptographic Provenance</span>
-                  <span class="tech-tag">Entity Resolution</span>
-                  <span class="tech-tag">Geospatial &amp; Market Kernels</span>
-                  <span class="tech-tag">Privacy Exposure Auditing</span>
-                </div>
-              </div>
-
-              <div class="system-blueprint">
-                <div class="blueprint-header">
-                  <span>ARCH_FIG_05 // OIA_PROVENANCE_DAG</span>
-                  <span>RUST · SHA-256 LINEAGE · LEAN 4</span>
-                </div>
-                <svg class="blueprint-svg" viewBox="0 0 460 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OIA architecture diagram showing multi-modal ingestion kernels, content-addressed provenance graph, and Lean 4 formal memory and lineage invariants">
-                  <rect x="12" y="14" width="436" height="50" rx="3" fill="#0B1220" stroke="#38BDF8" stroke-width="1.2"/>
-                  <text x="24" y="34" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">01 // BOUNDED-MEMORY STREAMING INGESTION</text>
-                  <text x="24" y="50" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">FOIA / SEC Filings · Geospatial &amp; Sky Telemetry · Privacy Surface Probes</text>
-
-                  <rect x="12" y="84" width="212" height="68" rx="3" fill="#0B1220" stroke="#94A3B8" stroke-width="1.2"/>
-                  <text x="24" y="104" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600">02 // PROVENANCE DAG</text>
-                  <text x="24" y="122" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Byte-Offset Span Anchors</text>
-                  <text x="24" y="138" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Content-Addressed Merkle Links</text>
-
-                  <rect x="236" y="84" width="212" height="68" rx="3" fill="#0B1220" stroke="#94A3B8" stroke-width="1.2"/>
-                  <text x="248" y="104" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600">03 // CORRELATION KERNELS</text>
-                  <text x="248" y="122" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">Entity Graph · Exposure Score</text>
-                  <text x="248" y="138" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Zero Uncited Claims Policy</text>
-
-                  <rect x="12" y="172" width="436" height="64" rx="3" fill="#0A191E" stroke="#34D399" stroke-width="1.2"/>
-                  <text x="24" y="192" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">04 // LEAN 4 FORMAL INVARIANTS</text>
-                  <text x="24" y="210" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="9">Bounded Heap Envelope · Lineage Completeness · Monotonic Redaction Safety</text>
-                  <text x="24" y="225" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Local-First Execution · Zero Telemetry Leakage</text>
-                </svg>
-                <div class="blueprint-footer">
-                  <span>SPECIFICATION: LEAN 4 BOUNDED-MEMORY &amp; LINEAGE PROOFS</span>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <!-- Active Upstream Open-Source Contributions -->
-        <div class="secondary-repos-panel upstream-panel">
-          <div class="secondary-header">
-            <span class="mono-label">ACTIVE UPSTREAM OPEN-SOURCE CONTRIBUTIONS // EXTERNAL CODEBASES</span>
-          </div>
-          <div class="upstream-grid">
-            <a href="https://github.com/tenstorrent/tt-metal/pull/64587" target="_blank" rel="noopener" class="mini-repo-card upstream-card">
-              <div class="mini-top">
-                <div>
-                  <span class="upstream-badge">TENSTORRENT // AI SILICON &amp; KERNEL STACK</span>
-                  <strong>tenstorrent/tt-metal</strong>
-                </div>
-                <span class="mini-arrow">PR #64587 ↗</span>
-              </div>
-              <p>Contributing to Tenstorrent's open-source <code>TT-Metalium</code> and <code>TT-NN</code> AI accelerator runtime and model execution stack, including canonical boolean mask predicate fixes in the UniAD autonomous driving model pipeline.</p>
-              <span class="mini-stack">C++ · Python · TT-NN · AI Accelerator Compute</span>
-            </a>
-
-            <a href="https://github.com/pingdotgg/t3code/pull/29808" target="_blank" rel="noopener" class="mini-repo-card upstream-card">
-              <div class="mini-top">
-                <div>
-                  <span class="upstream-badge">T3 CODE // AI CODING ENVIRONMENT</span>
-                  <strong>pingdotgg/t3code</strong>
-                </div>
-                <span class="mini-arrow">PR #29808 ↗</span>
-              </div>
-              <p>Contributing to the <code>t3code</code> AI-native coding workspace, fixing Agent Client Protocol (ACP) provider registry health checks to preserve authenticated provider sessions across status probes.</p>
-              <span class="mini-stack">TypeScript · React · Effect · Agent Client Protocol (ACP)</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Secondary Open-Source Utility & Pipeline Strip -->
-        <div class="secondary-repos-panel">
-          <div class="secondary-header">
-            <span class="mono-label">ADDITIONAL PUBLIC REPOSITORIES &amp; TOOLING // GITHUB.COM/mESmaC</span>
-          </div>
-          <div class="secondary-grid">
-            <a href="https://github.com/mESmaC/rivaltrace" target="_blank" rel="noopener" class="mini-repo-card">
-              <div class="mini-top">
-                <strong>RivalTrace</strong>
-                <span class="mini-arrow">↗</span>
-              </div>
-              <p>Deterministic competitive intelligence &amp; web diff engine tracking sitemap, pricing, and product-surface changes with FastAPI, Playwright, and SQLite.</p>
-              <span class="mini-stack">Python · FastAPI · Playwright · SQLite</span>
-            </a>
-
-            <a href="https://github.com/mESmaC/GranularCorporaControlFunnel" target="_blank" rel="noopener" class="mini-repo-card">
-              <div class="mini-top">
-                <strong>GCCF (Corpus Control Funnel)</strong>
-                <span class="mini-arrow">↗</span>
-              </div>
-              <p>Multi-stage LLM pretraining corpus curation, exact/fuzzy deduplication, and token-density quality filtering pipeline designed for high-signal training runs.</p>
-              <span class="mini-stack">Python · Data Pipelines · Tokenization</span>
-            </a>
-
-            <a href="https://github.com/mESmaC/yyLab" target="_blank" rel="noopener" class="mini-repo-card">
-              <div class="mini-top">
-                <strong>yyLab</strong>
-                <span class="mini-arrow">↗</span>
-              </div>
-              <p>Interactive systems, simulation, and algorithmic experimentation workbench for rapid prototyping and empirical verification.</p>
-              <span class="mini-stack">TypeScript · Python · Systems Workbench</span>
-            </a>
-
-            <a href="https://github.com/mESmaC/molor" target="_blank" rel="noopener" class="mini-repo-card">
-              <div class="mini-top">
-                <strong>molor</strong>
-                <span class="mini-arrow">↗</span>
-              </div>
-              <p>Perceptual color-space computation and high-contrast design-token generator built for technical interfaces and terminal tooling.</p>
-              <span class="mini-stack">Color Science · UI Tooling · CLI</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 02. Production Hardware & Professional Experience -->
-    <section id="hardware" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="section-eyebrow">02 // PRODUCTION HARDWARE, FIRMWARE &amp; INDUSTRY EXPERIENCE</div>
-            <h2 class="section-title">Shipping Safety-Critical Automotive Systems &amp; Full-Stack Products</h2>
-          </div>
-          <p class="section-desc">
-            Professional track record taking hardware, firmware, and software systems from schematic capture and silicon selection to bench bring-up and production deployment.
-          </p>
-        </div>
-
-        <!-- Primary Role: Electronic Mobility Controls -->
-        <div class="experience-card">
-          <div class="exp-header">
-            <div>
-              <div class="exp-badge-row">
-                <span class="badge badge-accent">08/2025 — PRESENT</span>
-                <span class="badge badge-outline">SOLE SOFTWARE &amp; SYSTEMS ENGINEER</span>
-                <span class="badge badge-outline">AUGUSTA, MAINE</span>
-              </div>
-              <h3 class="exp-title">Electronic Mobility Controls (EMC)</h3>
-              <p class="exp-role">Software, Firmware &amp; Hardware Systems Engineer — Adaptive Automotive Drive-by-Wire &amp; Accessibility Platforms</p>
-            </div>
-          </div>
-
-          <div class="exp-body-grid">
-            <div class="exp-narrative">
-              <p class="exp-intro">
-                Serve as the sole software and systems engineer responsible for architecture, firmware, Embedded Linux, PCB design, automated verification, and mechanical enclosure prototyping across EMC's adaptive automotive control product line.
-              </p>
-
-              <div class="subsystem-list">
-                <div class="subsystem-item">
-                  <div class="subsystem-head">
-                    <span class="sub-code">HW_ARCH_01</span>
-                    <h4>Universal Automotive Interceptor Architecture (<code>AEVIT v2 / ice40-cept2</code>)</h4>
-                  </div>
-                  <p>
-                    Architected a universal inline vehicle interceptor module to replace separate vehicle-specific add-on boards across diverse OEM platforms. Selected the tri-processor compute topology and fail-safe signal path:
-                  </p>
-                  <ul>
-                    <li><strong>NXP S32K344 (ARM Cortex-M7 lockstep):</strong> Chosen specifically for its native Automotive Ethernet PHY interface alongside 6× CAN-FD, 4× LIN, and 2× CXPI controllers.</li>
-                    <li><strong>Lattice iCE40UP5K FPGA:</strong> Sized for deterministic LUT-level bit-timing and protocol bridging of non-standard automotive buses (SAE J2716 SENT, BEAN, CXPI) without paying BOM/power overhead for unused DSP slices.</li>
-                    <li><strong>Okika AN231E04 FPAA:</strong> Integrated a dynamically reconfigurable switched-capacitor Field-Programmable Analog Array to spoof multi-channel resistive ladders and analog OEM switch matrices in real time.</li>
-                    <li><strong>Fail-Safe Short-to-OEM Relay Topology:</strong> Designed the hardware signal path with normally-closed (<code>NC</code>) pass-through relays that keep OEM vehicle wiring directly shorted through when unpowered or faulted, switching <code>NO-to-COM</code> only after watchdog and safety interlocks arm.</li>
-                  </ul>
-                </div>
-
-                <div class="subsystem-item">
-                  <div class="subsystem-head">
-                    <span class="sub-code">FW_PROTO_02</span>
-                    <h4>SAE J2716 SENT Shifter Interceptor (<code>SentShift / SENT_Frontend</code>)</h4>
-                  </div>
-                  <p>
-                    Adapted CAN/LIN vehicle control logic to the single-wire <strong>SAE J2716 SENT</strong> (Single Edge Nibble Transmission) protocol, designing both the OEM-first interceptor PCB and deterministic nibble-framing/CRC firmware for modern shift-by-wire transmissions.
-                  </p>
-                </div>
-
-                <div class="subsystem-item">
-                  <div class="subsystem-head">
-                    <span class="sub-code">LINUX_HMI_03</span>
-                    <h4>Embedded Linux Voice Recognition Controller (<code>AIC / Yocto / NXP VIT</code>) &amp; Verification</h4>
-                  </div>
-                  <p>
-                    Built an offline push-to-talk automotive voice controller on <strong>i.MX8 / i.MX93</strong> using custom <strong>Yocto/BitBake</strong> layers (<code>meta-aic</code>) and <strong>NXP Voice Intelligent Technology (VIT)</strong> to actuate secondary vehicle functions over CAN. Refined production <strong>Qt/QML</strong> touch displays, authored a <strong>129-test host-side C verification suite</strong> (<code>a2-test</code>), and designed production-ready enclosures in <strong>Fusion 360 / FreeCAD</strong> (incorporating injection-molding draft angles and rapid 3D-printed shop fixtures).
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Hardware Blueprint Diagram for EMC Interceptor -->
-            <div class="exp-blueprint">
-              <div class="blueprint-header">
-                <span>HW_BLOCK_FIG // AEVIT_V2_UNIVERSAL_INTERCEPTOR</span>
-                <span>S32K344 + iCE40 + FPAA</span>
-              </div>
-              <svg class="blueprint-svg" viewBox="0 0 460 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Universal Automotive Interceptor hardware block diagram showing NXP S32K344 MCU, Lattice iCE40UP5K FPGA, Okika AN231E04 FPAA, and fail-safe NC relay pass-through topology">
-                <!-- Fail-Safe Relay Banner -->
-                <rect x="12" y="14" width="436" height="58" rx="3" fill="#0A191E" stroke="#34D399" stroke-width="1.3"/>
-                <text x="24" y="34" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">FAIL-SAFE HARDWARE TOPOLOGY // NORMALLY-CLOSED (NC) OEM BYPASS</text>
-                <text x="24" y="50" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="9">Unpowered / Fault State: OEM_IN ──[ NC_RELAY ]──► OEM_ECU (Direct Pass-Through)</text>
-                <text x="24" y="64" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Armed State: Switches NO-to-COM only under valid S32K344 + Watchdog enable</text>
-
-                <!-- Primary MCU: S32K344 -->
-                <rect x="12" y="92" width="436" height="72" rx="3" fill="#0B1220" stroke="#38BDF8" stroke-width="1.3"/>
-                <text x="24" y="112" fill="#38BDF8" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="600">PRIMARY MCU // NXP S32K344 (CORTEX-M7 LOCKSTEP)</text>
-                <text x="24" y="130" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9.5">100BASE-T1 Automotive Ethernet PHY · 6× CAN-FD · 4× LIN · 2× CXPI</text>
-                <text x="24" y="148" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Deterministic State Machine · Host C Test Suite (129 Tests) · Safety Interlocks</text>
-
-                <!-- Connectors to FPGA and FPAA -->
-                <line x1="118" y1="164" x2="118" y2="188" stroke="#38BDF8" stroke-width="1.3"/>
-                <line x1="342" y1="164" x2="342" y2="188" stroke="#F59E0B" stroke-width="1.3"/>
-
-                <!-- Lattice iCE40UP5K FPGA -->
-                <rect x="12" y="188" width="212" height="76" rx="3" fill="#0B1220" stroke="#A78BFA" stroke-width="1.2"/>
-                <text x="24" y="208" fill="#C4B5FD" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">DIGITAL TIMING // iCE40UP5K FPGA</text>
-                <text x="24" y="226" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">5.3K LUT4 Fabric (Zero DSP Waste)</text>
-                <text x="24" y="242" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">SAE J2716 SENT · BEAN · CXPI</text>
-                <text x="24" y="255" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Sub-µs Pulse &amp; Nibble Synthesis</text>
-
-                <!-- Okika AN231E04 FPAA -->
-                <rect x="236" y="188" width="212" height="76" rx="3" fill="#0B1220" stroke="#F59E0B" stroke-width="1.2"/>
-                <text x="248" y="208" fill="#FBBF24" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">ANALOG MATRIX // OKIKA FPAA</text>
-                <text x="248" y="226" fill="#CBD5E1" font-family="JetBrains Mono, monospace" font-size="9">AN231E04 Switched-Cap Array</text>
-                <text x="248" y="242" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Dynamic Resistive Ladder Spoofing</text>
-                <text x="248" y="255" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Differential OEM Sensor Emulation</text>
-
-                <!-- Embedded Linux & HMI Companion -->
-                <rect x="12" y="280" width="436" height="48" rx="3" fill="#0F172A" stroke="#64748B" stroke-width="1.2"/>
-                <text x="24" y="300" fill="#E2E8F0" font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600">COMPANION HMI &amp; VOICE NODE // i.MX8 / i.MX93 EMBEDDED LINUX</text>
-                <text x="24" y="316" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="8.5">Custom Yocto Layer (meta-aic) · NXP VIT Offline Voice Pipeline · Qt/QML Touch Display</text>
-              </svg>
-
-              <div class="exp-tags-box">
-                <span class="tech-tag">NXP S32K344</span>
-                <span class="tech-tag">Lattice iCE40UP5K FPGA</span>
-                <span class="tech-tag">Okika AN231E04 FPAA</span>
-                <span class="tech-tag">SAE J2716 SENT</span>
-                <span class="tech-tag">CAN-FD / LIN / CXPI</span>
-                <span class="tech-tag">Yocto / BitBake</span>
-                <span class="tech-tag">NXP VIT Voice</span>
-                <span class="tech-tag">Qt / QML</span>
-                <span class="tech-tag">KiCad PCB Design</span>
-                <span class="tech-tag">Fusion 360 / FreeCAD</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Earlier Full-Stack & Systems Experience -->
-        <div class="experience-card experience-card-compact">
-          <div class="exp-compact-grid">
-            <div>
-              <div class="exp-badge-row">
-                <span class="badge badge-outline">2022 — 2025</span>
-                <span class="badge badge-outline">FULL-STACK &amp; AI PRODUCT ENGINEERING</span>
-              </div>
-              <h3 class="exp-title-sm">Independent Full-Stack Product &amp; Systems Engineering</h3>
-              <p class="exp-role-sm">End-to-End Web Applications, Relational Data Pipelines &amp; Developer Tooling</p>
-            </div>
-            <div class="exp-compact-details">
+            <div class="project-body">
               <p>
-                Designed, built, and deployed full-stack web and cross-platform software applications across TypeScript, React, Next.js, Python, and SQL. Owned requirement discovery, UI/UX implementation, REST API design, OAuth 2.0 authentication, relational schema migrations (PostgreSQL/SQLite), automated Playwright/pytest test suites, and Linux cloud deployment—establishing the AI-native, single-engineer workflow now applied to flagship systems like <strong>Electrace</strong> and <strong>Kadmium</strong>.
+                A full-stack electronic design automation tool that combines schematic capture, multi-layer
+                PCB layout, design-rule checking and KiCad export — all controllable by AI agents through a
+                Model Context Protocol server.
               </p>
+              <ul class="highlights">
+                <li>Zero-dependency SVG canvas for schematics and multi-layer PCB routing, with 45° traces, copper pours and thermal reliefs.</li>
+                <li>Graph-based electrical and design-rule checks: clearances, annular rings, drill limits, unrouted nets and power-rail propagation.</li>
+                <li>A 20+ tool MCP server lets agents place parts, route nets and fix DRC violations in a closed loop, then export <code>.kicad_sch</code> / <code>.kicad_pcb</code> files.</li>
+              </ul>
             </div>
+          </article>
+
+          <article class="project">
+            <div class="project-meta">
+              <h3><a href="https://github.com/mESmaC/Kadmium" target="_blank" rel="noopener">Kadmium</a></h3>
+              <p class="project-tagline">Distributed AI compute in Rust, with Lean 4 correctness proofs</p>
+              <ul class="tags">
+                <li>Rust</li><li>Tokio</li><li>Lean 4</li><li>SafeTensors</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/mESmaC/Kadmium" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <p>
+                Inspired by BOINC and CERN's computing grid, Kadmium splits transformer training and inference
+                across mixed consumer and datacenter GPUs — with machine-checked proofs that the sharded result
+                is identical to running on one machine.
+              </p>
+              <ul class="highlights">
+                <li>Pure-Rust runtime for Llama, Mistral and Qwen models that streams only its assigned layers from SafeTensors, never loading the full model.</li>
+                <li>A planner assigns layers by each node's free VRAM and bandwidth, and re-routes work automatically when a node drops out.</li>
+                <li>Zero-<code>sorry</code> Lean 4 proof of partition equivalence, backed by Rust tests showing bit-identical output across cuts.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-meta">
+              <h3><a href="https://github.com/mESmaC/mcl4-coe-ncm" target="_blank" rel="noopener">MCL4-COE &amp; NCM</a></h3>
+              <p class="project-tagline">Custom LLM architecture, pretrained on a single 12&nbsp;GB GPU</p>
+              <ul class="tags">
+                <li>PyTorch</li><li>CUDA</li><li>Mixture-of-Experts</li><li>NVFP4</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/mESmaC/mcl4-coe-ncm" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+                <a href="https://huggingface.co/mesmac" target="_blank" rel="noopener">Hugging Face <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <p>
+                A language model family designed from first principles to train multi-billion-parameter models
+                on consumer hardware. I've pretrained and published 2.43B and 1.77B parameter checkpoints.
+              </p>
+              <ul class="highlights">
+                <li>MCL4 sparse attention: a Markov-chain local window plus global anchor tokens, for long context in linear memory.</li>
+                <li>A causal encoder-decoder Mixture-of-Experts backbone with nine specialized reasoning heads combined under a single softmax.</li>
+                <li>CPU-offloaded AdamW, activation checkpointing and NVFP4 2:4 sparsity to fit training into 12&nbsp;GB of VRAM.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-meta">
+              <h3><a href="https://github.com/mESmaC/Mirror" target="_blank" rel="noopener">Mirror</a></h3>
+              <p class="project-tagline">A multi-core x86_64 operating system kernel in Rust</p>
+              <ul class="tags">
+                <li>Rust (no_std)</li><li>x86_64 assembly</li><li>UEFI</li><li>QEMU</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/mESmaC/Mirror" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <p>
+                A freestanding kernel with multi-core scheduling, per-process memory isolation, a user-mode
+                environment and real device drivers.
+              </p>
+              <ul class="highlights">
+                <li>Per-process page tables with copy-on-write <code>fork</code>, demand paging and hardware protections (NX, SMEP, SMAP, UMIP).</li>
+                <li>4-CPU scheduling with TLB shootdowns, a 35-syscall user ABI, ELF64 loading, signals, pipes and <code>poll</code>.</li>
+                <li>VirtIO, AHCI and xHCI drivers, verified across 156 automated QEMU boot and fault-injection tests.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-meta">
+              <h3><a href="https://github.com/mESmaC/oia" target="_blank" rel="noopener">OIA</a></h3>
+              <p class="project-tagline">Local-first public-records &amp; privacy-exposure analysis</p>
+              <ul class="tags">
+                <li>Rust</li><li>Lean 4</li><li>Provenance</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/mESmaC/oia" target="_blank" rel="noopener">View on GitHub <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <div class="project-body">
+              <p>
+                The Open Intelligence Agency is a multi-crate Rust platform for auditing personal privacy
+                exposure and correlating public records, where every claim traces back to its exact source.
+              </p>
+              <ul class="highlights">
+                <li>Every extracted entity and score links to the byte range and SHA-256 hash of the document it came from.</li>
+                <li>Analysis modules for corporate filings, geospatial and celestial verification, and data-broker exposure.</li>
+                <li>Lean 4 specifications for bounded-memory streaming, complete lineage and safe redaction.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">Open-source contributions</h3>
+          <div class="card-grid card-grid-2">
+            <a class="card" href="https://github.com/tenstorrent/tt-metal/pull/64587" target="_blank" rel="noopener">
+              <span class="card-kicker">tenstorrent/tt-metal · PR #64587</span>
+              <strong class="card-title">Tenstorrent TT-Metalium</strong>
+              <p>Fixed boolean mask predicates in the UniAD autonomous-driving model pipeline for Tenstorrent's AI accelerator stack.</p>
+              <span class="card-foot">C++ · Python</span>
+            </a>
+            <a class="card" href="https://github.com/pingdotgg/t3code/pull/29808" target="_blank" rel="noopener">
+              <span class="card-kicker">pingdotgg/t3code · PR #29808</span>
+              <strong class="card-title">T3 Code</strong>
+              <p>Fixed Agent Client Protocol provider health checks so authenticated sessions survive status probes.</p>
+              <span class="card-foot">TypeScript · React · Effect</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">More projects</h3>
+          <div class="card-grid card-grid-4">
+            <a class="card" href="https://github.com/mESmaC/rivaltrace" target="_blank" rel="noopener">
+              <strong class="card-title">RivalTrace</strong>
+              <p>Tracks changes to competitors' sitemaps, pricing and product pages.</p>
+              <span class="card-foot">Python · FastAPI · Playwright</span>
+            </a>
+            <a class="card" href="https://github.com/mESmaC/GranularCorporaControlFunnel" target="_blank" rel="noopener">
+              <strong class="card-title">GCCF</strong>
+              <p>Curation, deduplication and quality filtering for LLM pretraining data.</p>
+              <span class="card-foot">Python · Data pipelines</span>
+            </a>
+            <a class="card" href="https://github.com/mESmaC/yyLab" target="_blank" rel="noopener">
+              <strong class="card-title">yyLab</strong>
+              <p>A workbench for systems, simulation and algorithm experiments.</p>
+              <span class="card-foot">TypeScript · Python</span>
+            </a>
+            <a class="card" href="https://github.com/mESmaC/molor" target="_blank" rel="noopener">
+              <strong class="card-title">molor</strong>
+              <p>Perceptual color math and high-contrast design tokens for technical UIs.</p>
+              <span class="card-foot">Color science · CLI</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 03. Capabilities & Verification Matrix -->
-    <section id="architecture" class="section">
+    <!-- Experience -->
+    <section class="section section-tinted" id="experience">
       <div class="container">
-        <div class="section-header">
-          <div>
-            <div class="section-eyebrow">03 // TECHNICAL SPECIFICATION MATRIX</div>
-            <h2 class="section-title">Full-Stack, Systems, AI &amp; Hardware Capabilities</h2>
-          </div>
-          <p class="section-desc">
-            A concrete breakdown of the languages, runtimes, verification tools, and physical bench instruments I work with daily.
-          </p>
+        <div class="section-head">
+          <h2>Experience</h2>
         </div>
 
-        <div class="matrix-grid">
-          <div class="matrix-card">
-            <div class="matrix-code">CAP_01 // LANGUAGES &amp; FORMAL</div>
-            <h3>Core Languages</h3>
-            <ul>
-              <li><strong>TypeScript / JavaScript (ES2024+)</strong> — Full-stack apps, SVG/Canvas CAD engines, Node.js tooling</li>
-              <li><strong>Rust (Stable &amp; <code>no_std</code>)</strong> — Distributed runtimes, async network services, freestanding OS kernels</li>
-              <li><strong>C &amp; C++</strong> — Bare-metal MCU firmware, real-time state machines, Qt/QML native backends</li>
-              <li><strong>Python</strong> — PyTorch LLM training, FastAPI backends, automation &amp; data pipelines</li>
-              <li><strong>SQL (PostgreSQL / SQLite)</strong> — Schema design, indexing, transactional telemetry</li>
-              <li><strong>Verilog &amp; Lean 4</strong> — iCE40 FPGA RTL synthesis and machine-checked formal proofs</li>
-            </ul>
-          </div>
+        <div class="timeline">
+          <article class="job">
+            <div class="job-when">
+              <span>Aug 2025 — Present</span>
+              <span class="job-where">Augusta, Maine</span>
+            </div>
+            <div class="job-body">
+              <h3>Software &amp; Systems Engineer</h3>
+              <p class="job-company">Electronic Mobility Controls</p>
+              <p>
+                Sole engineer responsible for architecture, firmware, embedded Linux, PCB design, testing and
+                enclosure prototyping across EMC's adaptive drive-by-wire and accessibility products.
+              </p>
+              <ul class="highlights">
+                <li>Architected a universal vehicle interceptor to replace separate vehicle-specific boards: an NXP S32K344 MCU (automotive Ethernet, CAN-FD, LIN, CXPI), a Lattice iCE40 FPGA for precise bus timing, and an Okika FPAA to emulate analog OEM signals.</li>
+                <li>Designed a fail-safe signal path using normally-closed relays, so the vehicle's original wiring passes straight through whenever the module is unpowered or faulted.</li>
+                <li>Built a SAE J2716 SENT shifter interceptor — PCB and firmware — for modern shift-by-wire transmissions.</li>
+                <li>Shipped an offline voice controller on i.MX8 / i.MX93 using custom Yocto layers and NXP VIT, with Qt/QML touch displays and a 129-test C verification suite.</li>
+                <li>Designed production enclosures in Fusion 360 and FreeCAD, plus 3D-printed shop fixtures.</li>
+              </ul>
+              <ul class="tags">
+                <li>C / C++</li><li>NXP S32K344</li><li>iCE40 FPGA</li><li>CAN-FD / LIN</li><li>Yocto</li><li>Qt / QML</li><li>KiCad</li>
+              </ul>
+            </div>
+          </article>
 
-          <div class="matrix-card">
-            <div class="matrix-code">CAP_02 // PRODUCT &amp; FULL-STACK</div>
-            <h3>Web, UI &amp; APIs</h3>
-            <ul>
-              <li><strong>React &amp; Next.js</strong> — Complex stateful workspaces, real-time editors, SSR/App Router</li>
-              <li><strong>API Architecture</strong> — RESTful APIs, WebSockets, JSON-RPC, OAuth 2.0 / JWT auth</li>
-              <li><strong>Database &amp; ORM</strong> — PostgreSQL, SQLite, Prisma, content-addressed storage</li>
-              <li><strong>Interactive Graphics</strong> — Custom 2D SVG/Canvas geometry, spatial indexing, hit-testing</li>
-              <li><strong>Browser Automation</strong> — Playwright deterministic testing &amp; headless extraction</li>
-            </ul>
-          </div>
+          <article class="job">
+            <div class="job-when">
+              <span>2022 — 2025</span>
+              <span class="job-where">Independent</span>
+            </div>
+            <div class="job-body">
+              <h3>Full-Stack Product Engineer</h3>
+              <p class="job-company">Freelance &amp; personal projects</p>
+              <p>
+                Designed, built and deployed web and cross-platform applications in TypeScript, React, Next.js,
+                Python and SQL — owning requirements, UI, REST APIs, OAuth authentication, PostgreSQL/SQLite
+                schemas, Playwright and pytest suites, and Linux cloud deployment.
+              </p>
+              <ul class="tags">
+                <li>TypeScript</li><li>React</li><li>Next.js</li><li>Python</li><li>PostgreSQL</li><li>Playwright</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-          <div class="matrix-card">
-            <div class="matrix-code">CAP_03 // AI-NATIVE &amp; ML SYSTEMS</div>
-            <h3>AI Agents &amp; Deep Learning</h3>
-            <ul>
-              <li><strong>Model Context Protocol (MCP)</strong> — Multi-tool agent servers for closed-loop software &amp; CAD control</li>
-              <li><strong>AI-Native Workflow</strong> — High-leverage shipping with Claude Code, agentic harnesses &amp; automated verification</li>
-              <li><strong>Custom LLM Architectures</strong> — Sparse attention (<code>MCL4</code>), Mixture-of-Experts (<code>CED</code>), <code>COE</code> heads</li>
-              <li><strong>Memory-Constrained Training</strong> — <code>CPUOffloadAdamW</code>, <code>NVFP4</code> 2:4 sparsity, activation checkpointing</li>
-              <li><strong>Distributed Inference/Training</strong> — SafeTensors layer sharding across heterogeneous GPUs</li>
-            </ul>
-          </div>
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
+        </div>
 
-          <div class="matrix-card">
-            <div class="matrix-code">CAP_04 // EMBEDDED &amp; HARDWARE</div>
-            <h3>Silicon, Buses &amp; Mechanical</h3>
-            <ul>
-              <li><strong>Microcontrollers &amp; SoCs</strong> — NXP S32K344 (Cortex-M7), i.MX8 / i.MX93, STM32, ESP32</li>
-              <li><strong>Programmable Logic &amp; Analog</strong> — Lattice iCE40UP5K FPGA, Okika AN231E04 FPAA</li>
-              <li><strong>Automotive Protocols</strong> — CAN / CAN-FD, LIN, SAE J2716 SENT, Automotive Ethernet, CXPI</li>
-              <li><strong>Embedded Linux &amp; HMI</strong> — Yocto Project / BitBake, U-Boot, NXP VIT voice, Qt/QML</li>
-              <li><strong>EDA &amp; Mechanical CAD</strong> — KiCad schematic/PCB layout, Fusion 360, FreeCAD, 3D printing &amp; DFM</li>
-            </ul>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <p>TypeScript / JavaScript, Rust, C / C++, Python, SQL, Verilog, Lean 4</p>
+          </div>
+          <div class="skill-group">
+            <h3>Web &amp; product</h3>
+            <p>React, Next.js, Node.js, FastAPI, PostgreSQL, SQLite, Prisma, Tailwind, REST &amp; WebSockets, OAuth, Playwright</p>
+          </div>
+          <div class="skill-group">
+            <h3>AI &amp; ML</h3>
+            <p>PyTorch, CUDA, Model Context Protocol, LLM agents, Claude Code, Mixture-of-Experts, memory-constrained training</p>
+          </div>
+          <div class="skill-group">
+            <h3>Embedded &amp; hardware</h3>
+            <p>NXP S32K344, i.MX8 / i.MX93, STM32, ESP32, Lattice iCE40, CAN-FD, LIN, SENT, Yocto, Qt/QML, KiCad, Fusion 360</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 04. Contact & Direct Dispatch -->
-    <section id="contact" class="section section-contact">
-      <div class="container">
-        <div class="contact-panel">
-          <div class="contact-left">
-            <div class="section-eyebrow">04 // DIRECT DISPATCH</div>
-            <h2 class="contact-title">Looking for an engineer who can own the entire stack?</h2>
-            <p class="contact-desc">
-              Whether you need a high-velocity AI-native Product Engineer who can take full-stack features and internal automations from a conversation to shipped software in hours, or a Systems/Embedded Engineer who can bridge cloud software with physical hardware, I'd love to talk.
-            </p>
-            <div class="contact-meta">
-              <span><strong>Location:</strong> Augusta, Maine (US Eastern Time · Open to Remote &amp; On-Site/Hybrid)</span>
-              <span><strong>Work Authorization:</strong> U.S. Citizen</span>
-            </div>
-          </div>
-
-          <div class="contact-right">
-            <a href="mailto:cemerybusiness@gmail.com" class="contact-action-card contact-action-primary">
-              <div>
-                <span class="action-label">DIRECT EMAIL</span>
-                <strong class="action-val">cemerybusiness@gmail.com</strong>
-              </div>
-              <span class="action-arrow">→</span>
-            </a>
-
-            <a href="assets/Cameron_Emery_Resume.pdf" target="_blank" rel="noopener" class="contact-action-card">
-              <div>
-                <span class="action-label">CURRICULUM VITAE // 1-PAGE PDF</span>
-                <strong class="action-val">Download Cameron_Emery_Resume.pdf</strong>
-              </div>
-              <span class="action-arrow">↗</span>
-            </a>
-
-            <div class="contact-sub-row">
-              <a href="https://github.com/mESmaC" target="_blank" rel="noopener" class="contact-action-mini">
-                <span class="action-label">GITHUB</span>
-                <strong>@mESmaC ↗</strong>
-              </a>
-              <a href="https://huggingface.co/mesmac" target="_blank" rel="noopener" class="contact-action-mini">
-                <span class="action-label">HUGGING FACE</span>
-                <strong>mesmac ↗</strong>
-              </a>
-              <a href="https://www.linkedin.com/in/cameronemery67" target="_blank" rel="noopener" class="contact-action-mini">
-                <span class="action-label">LINKEDIN</span>
-                <strong>/in/cameronemery67 ↗</strong>
-              </a>
-            </div>
-          </div>
-        </div>
+    <!-- Contact -->
+    <section class="section section-tinted contact" id="contact">
+      <div class="container contact-inner">
+        <h2>Let's work together</h2>
+        <p>
+          I'm open to product, systems and embedded engineering roles — remote, hybrid or on-site.
+          The best way to reach me is email.
+        </p>
+        <a href="mailto:cemerybusiness@gmail.com" class="btn btn-primary btn-large">cemerybusiness@gmail.com</a>
+        <p class="contact-note">Based in Augusta, Maine (Eastern Time) · U.S. citizen</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-left">
-        <span class="mono-label">CAMERON EMERY // SYSTEMS, EMBEDDED &amp; AI-NATIVE PRODUCT ENGINEER</span>
-      </div>
-      <div class="footer-right">
-        <a href="https://github.com/mESmaC" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://huggingface.co/mesmac" target="_blank" rel="noopener">Hugging Face</a>
-        <a href="https://www.linkedin.com/in/cameronemery67" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="assets/Cameron_Emery_Resume.pdf" target="_blank" rel="noopener">Résumé PDF</a>
-      </div>
+      <span>© 2026 Cameron Emery</span>
+      <ul class="social-links">
+        <li><a href="https://github.com/mESmaC" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://huggingface.co/mesmac" target="_blank" rel="noopener">Hugging Face</a></li>
+        <li><a href="https://www.linkedin.com/in/cameronemery67" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="assets/Cameron_Emery_Resume.pdf" target="_blank" rel="noopener">Résumé</a></li>
+      </ul>
     </div>
   </footer>
 

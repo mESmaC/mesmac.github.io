@@ -1,45 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Mobile Navigation Toggle
+  // Mobile navigation
   const navToggle = document.getElementById('navToggle');
   const primaryNav = document.getElementById('primaryNav');
 
   if (navToggle && primaryNav) {
+    const setOpen = (open) => {
+      primaryNav.classList.toggle('is-open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+      navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+
     navToggle.addEventListener('click', () => {
-      const isOpen = primaryNav.classList.toggle('is-open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
+      setOpen(!primaryNav.classList.contains('is-open'));
     });
 
     primaryNav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        primaryNav.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', () => setOpen(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setOpen(false);
     });
   }
 
-  // 2. Flagship System Category Filtering
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const systemCards = document.querySelectorAll('.system-card');
-
-  filterButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const filter = btn.getAttribute('data-filter') || 'all';
-
-      filterButtons.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      systemCards.forEach((card) => {
-        if (filter === 'all') {
-          card.classList.remove('is-hidden');
-          return;
-        }
-        const categories = (card.getAttribute('data-category') || '').split(/\s+/);
-        if (categories.includes(filter)) {
-          card.classList.remove('is-hidden');
-        } else {
-          card.classList.add('is-hidden');
-        }
-      });
-    });
-  });
+  // Show a divider under the header once the page is scrolled
+  const header = document.getElementById('siteHeader');
+  if (header) {
+    const update = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+  }
 });
